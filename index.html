@@ -36,7 +36,31 @@
 
 <footer>
     <p>© 2026 Sanajit Patra | All Rights Reserved</p>
+
+     <p class="visitor">
+        Visitors: 
+        <span id="total-visits">Loading...</span> | 
+        Today: <span id="today-visits">Loading...</span>
+    </p>
 </footer>
+
+async function updateCounter() {
+    const namespace = "sanajit-site"; 
+    const keyTotal = "total";
+    const keyDaily = new Date().toISOString().slice(0,10);
+
+    let total = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyTotal}`)
+        .then(res => res.json());
+
+    let daily = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyDaily}`)
+        .then(res => res.json());
+
+    document.getElementById("total-visits").innerText = total.value;
+    document.getElementById("today-visits").innerText = daily.value;
+}
+
+updateCounter();
+</script>
 
 </body>
 </html>
