@@ -1,88 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanajit Patra | PhD Student</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanajit Patra | PhD Student</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>Sanajit Patra</h1>
-    <p>PhD Student</p>
-    <p>Department of Mathematics, IIT Kharagpur</p>
-    <p>West Bengal, India, 721302</p>
+<h1>Sanajit Patra</h1>
+<p>PhD Student</p>
+<p>Department of Mathematics, IIT Kharagpur</p>
+<p>West Bengal, India, 721302</p>
 </header>
 
 <nav>
-    <a href="/" class="active">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="research.html">Research</a>
     <a href="publications.html">Publications</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">Contact</a>    
 </nav>
 
 <section>
-    <h2>Welcome</h2>
-    <p>
-        Welcome to my academic webpage. I am a fourth-year PhD student in the Department of Mathematics at the Indian Institute of Technology Kharagpur, working under the supervision of Prof. Ratna Dutta.
-    </p>
-
-    <p>
-        My research focuses on modern cryptography, particularly functional encryption, lattice-based cryptography, and code-based encryption.
-    </p>
-
-    <p>
-        My work is centered on the design and analysis of advanced cryptographic primitives that are efficient and secure in the post-quantum setting.
-    </p>
-
-    <p>
-        I am interested in constructing expressive encryption schemes and studying their underlying mathematical structures using tools from algebra, number theory, and combinatorics.
-    </p>
-
-    <p>
-        More broadly, my research aims to connect rigorous theoretical foundations with emerging applications in secure computation, privacy-preserving technologies, and distributed systems.
-    </p>
+<h2>Welcome</h2>
+<p>
+Welcome to my academic webpage. I am a fourth-year PhD student in the Department of Mathematics at the Indian Institute of Technology Kharagpur, working under the supervision of Prof. Ratna Dutta. 
+My research focuses on modern cryptography, particularly functional encryption, lattice-based cryptography, and code-based encryption. 
+My work is centered on the design and analysis of advanced cryptographic primitives that are efficient and secure in the post-quantum setting. 
+I am interested in constructing expressive encryption schemes and studying their underlying mathematical structures using tools from algebra, number theory, 
+and combinatorics. More broadly, my research aims to connect rigorous theoretical foundations with emerging applications in secure computation, privacy-preserving technologies, and distributed systems.
+</p>
 </section>
 
 <footer>
-    <p>© 2026 Sanajit Patra | All Rights Reserved</p>
+<p>© 2026 Sanajit Patra | All Rights Reserved</p>
 
-    <p class="visitor">
-        Visitors: 
-        <span id="total-visits">Loading...</span> | 
-        Today: <span id="today-visits">Loading...</span>
-    </p>
+<p class="visitor">
+Visitors: 
+<span id="total-visits">0</span> | 
+Today: <span id="today-visits">0</span>
+</p>
 </footer>
 
-<!-- Visitor Counter Script -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    updateCounter();
-});
+window.onload = function() {
+updateCounter();
+};
 
 async function updateCounter() {
-    const namespace = "sanajit-patra-site";
+try {
+const namespace = "sanajit-site";
+const keyTotal = "total";
+const keyDaily = new Date().toISOString().slice(0,10);
 
-    try {
-        const totalRes = await fetch("https://api.countapi.xyz/hit/" + namespace + "/total");
-        const totalData = await totalRes.json();
+const totalRes = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyTotal}`);
+const totalData = await totalRes.json();
 
-        const today = new Date().toISOString().split("T")[0];
-        const dailyRes = await fetch("https://api.countapi.xyz/hit/" + namespace + "/" + today);
-        const dailyData = await dailyRes.json();
+const dailyRes = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyDaily}`);
+const dailyData = await dailyRes.json();
 
-        document.getElementById("total-visits").textContent = totalData.value;
-        document.getElementById("today-visits").textContent = dailyData.value;
+document.getElementById("total-visits").innerText = totalData.value;
+document.getElementById("today-visits").innerText = dailyData.value;
 
-    } catch (error) {
-        console.log("Visitor counter error:", error);
-        document.getElementById("total-visits").textContent = "N/A";
-        document.getElementById("today-visits").textContent = "N/A";
-    }
+} catch (error) {
+console.log("Counter error:", error);
+}
 }
 </script>
-
 </body>
 </html>
