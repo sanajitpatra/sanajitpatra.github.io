@@ -39,29 +39,35 @@
 
     <p class="visitor">
         Visitors: 
-        <span id="total-visits">Loading...</span> | 
-        Today: <span id="today-visits">Loading...</span>
+        <span id="total-visits">0</span> | 
+        Today: <span id="today-visits">0</span>
     </p>
 </footer>
 
 <script>
+window.onload = function() {
+    updateCounter();
+};
+
 async function updateCounter() {
-    const namespace = "sanajit-site"; 
-    const keyTotal = "total";
-    const keyDaily = new Date().toISOString().slice(0,10);
+    try {
+        const namespace = "sanajit-site";
+        const keyTotal = "total";
+        const keyDaily = new Date().toISOString().slice(0,10);
 
-    let total = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyTotal}`)
-        .then(res => res.json());
+        const totalRes = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyTotal}`);
+        const totalData = await totalRes.json();
 
-    let daily = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyDaily}`)
-        .then(res => res.json());
+        const dailyRes = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyDaily}`);
+        const dailyData = await dailyRes.json();
 
-    document.getElementById("total-visits").innerText = total.value;
-    document.getElementById("today-visits").innerText = daily.value;
+        document.getElementById("total-visits").innerText = totalData.value;
+        document.getElementById("today-visits").innerText = dailyData.value;
+
+    } catch (error) {
+        console.log("Counter error:", error);
+    }
 }
-
-updateCounter();
 </script>
-
 </body>
 </html>
