@@ -39,35 +39,39 @@ and combinatorics. More broadly, my research aims to connect rigorous theoretica
 
 <p class="visitor">
 Visitors: 
-<span id="total-visits">0</span> | 
-Today: <span id="today-visits">0</span>
+<span id="total-visits">Loading...</span> | 
+Today: <span id="today-visits">Loading...</span>
 </p>
 </footer>
 
 <script>
-window.onload = function() {
-updateCounter();
-};
+document.addEventListener("DOMContentLoaded", function () {
+    updateCounter();
+});
 
 async function updateCounter() {
-try {
-const namespace = "sanajit-site";
-const keyTotal = "total";
-const keyDaily = new Date().toISOString().slice(0,10);
+    try {
+        const namespace = "sanajitpatra-iitkgp-2026"; // unique name
+        const today = new Date().toISOString().slice(0, 10);
 
-const totalRes = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyTotal}`);
-const totalData = await totalRes.json();
+        // Total visits
+        const totalRes = await fetch(`https://api.counterapi.dev/v2/${namespace}/total/up`);
+        const totalData = await totalRes.json();
 
-const dailyRes = await fetch(`https://api.countapi.xyz/hit/${namespace}/${keyDaily}`);
-const dailyData = await dailyRes.json();
+        // Daily visits
+        const dailyRes = await fetch(`https://api.counterapi.dev/v2/${namespace}/${today}/up`);
+        const dailyData = await dailyRes.json();
 
-document.getElementById("total-visits").innerText = totalData.value;
-document.getElementById("today-visits").innerText = dailyData.value;
+        document.getElementById("total-visits").innerText = totalData.count;
+        document.getElementById("today-visits").innerText = dailyData.count;
 
-} catch (error) {
-console.log("Counter error:", error);
-}
+    } catch (error) {
+        console.error("Counter error:", error);
+        document.getElementById("total-visits").innerText = "Error";
+        document.getElementById("today-visits").innerText = "Error";
+    }
 }
 </script>
+
 </body>
 </html>
