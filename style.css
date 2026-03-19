@@ -1,88 +1,109 @@
-/* ===== BODY (entire page styling) ===== */
+/* ===== BODY (entire page) ===== */
 body {
-    font-family: 'Inter', Arial, sans-serif; /* sets clean modern font */
-    margin: 0;              /* removes default browser margin */
-    padding: 0;             /* removes default browser padding */
-    background: linear-gradient(to right, #eef2f3, #ffffff); /* soft gradient page background */
-    color: #333;            /* default text color (dark grey) */
+    font-family: 'Inter', Arial, sans-serif; /* clean modern font */
+    margin: 0;                /* remove default spacing */
+    padding: 0;
+    background: #f8fafc;      /* soft light background (better than grey) */
+    color: #333;              /* default text color */
 }
 
 
-/* ===== HEADER (top title section) ===== */
+/* ===== HEADER ===== */
 header {
-    background-color: #1e3a8a; /* dark blue background */
-    color: white;              /* text color inside header */
-    text-align: center;        /* center align text */
-    padding: 25px 10px;        /* space inside header (top-bottom, left-right) */
+    background-color: #1e3a8a; /* deep academic blue */
+    color: white;
+    text-align: center;
+    padding: 18px 10px;        /* reduced height (cleaner look) */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 14px;
+    opacity: 0.9;
 }
 
 
-/* ===== NAVIGATION BAR ===== */
+/* ===== NAVBAR ===== */
 nav {
-    background-color: #111827; /* very dark background */
-    text-align: center;        /* center links horizontally */
-    padding: 10px;             /* spacing inside navbar */
+    background-color: #111827; /* dark navbar */
+    text-align: center;
+    padding: 10px;
 }
 
 nav a {
-    color: white;              /* link text color */
-    margin: 0 15px;            /* space between links */
-    text-decoration: none;     /* removes underline */
-    font-weight: bold;         /* makes links bold */
-    padding: 6px 10px;         /* clickable area padding */
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    transition: 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-    background-color: #60a5fa; /* highlight on hover or active page */
-    border-radius: 5px;        /* rounded edges */
+    background-color: #60a5fa; /* highlight */
+    border-radius: 6px;
 }
 
 
-/* ===== MAIN CONTENT BOX (VERY IMPORTANT) ===== */
+/* ===== MAIN CONTENT BOX ===== */
 .container {
-    max-width: 800px;          /* limits width of content */
-    width: 90%;                /* responsive width (good for small screens) */
-    margin: 50px auto;         /* centers box horizontally + adds top spacing */
-    padding: 40px;             /* inner spacing inside box */
+    max-width: 900px;         /* slightly wider */
+    width: 92%;
+    margin: 60px auto;        /* center with spacing */
+    padding: 45px;
 
-    background: #fff9db;       /* light yellow background */
-    border-radius: 12px;       /* rounded corners */
-    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.25); /* soft yellow shadow */
+    background: #ffffff;      /* clean white (best look) */
+    border-radius: 14px;      /* smooth corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* soft shadow */
 
-    text-align: justify;       /* aligns text evenly left & right */
-    text-justify: inter-word;  /* improves spacing between words */
-    line-height: 1.9;          /* increases line spacing (readability) */
+    text-align: left;         /* cleaner than justify */
+    line-height: 1.8;
 }
 
 
-/* ===== PARAGRAPH SPACING ===== */
+/* ===== HEADINGS INSIDE CONTENT ===== */
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1e3a8a;           /* matches header */
+}
+
+
+/* ===== PARAGRAPHS ===== */
 .container p {
-    margin-bottom: 20px;       /* space between paragraphs */
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 18px;
 }
 
 
 /* ===== FOOTER ===== */
 footer {
-    text-align: center;        /* center footer text */
-    background: #020617;       /* very dark background */
-    color: white;              /* white text */
-    padding: 15px;             /* spacing inside footer */
-    margin-top: 40px;          /* space above footer */
+    text-align: center;
+    background: #020617;      /* very dark */
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
 }
 
 
 /* ===== VISITOR COUNTER ===== */
 .visitor {
-    margin-top: 8px;           /* space above counter */
-    font-size: 14px;           /* smaller text */
-    color: #cbd5f5;            /* light bluish color */
+    margin-top: 8px;
+    font-size: 14px;
+    color: #cbd5f5;
 }
 
 
 /* ===== COUNTER NUMBERS ===== */
 #total-visits, 
 #today-visits {
-    font-weight: bold;         /* bold numbers */
-    color: #60a5fa;            /* highlight numbers in blue */
+    font-weight: bold;
+    color: #60a5fa;
 }
