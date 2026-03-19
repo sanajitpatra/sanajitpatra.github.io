@@ -51,24 +51,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function updateCounter() {
     try {
-        const namespace = "sanajitpatra-iitkgp-2026"; // unique name
+        const namespace = "sanajitpatra-iitkgp-2026";
         const today = new Date().toISOString().slice(0, 10);
 
-        // Total visits
         const totalRes = await fetch(`https://api.counterapi.dev/v2/${namespace}/total/up`);
         const totalData = await totalRes.json();
 
-        // Daily visits
         const dailyRes = await fetch(`https://api.counterapi.dev/v2/${namespace}/${today}/up`);
         const dailyData = await dailyRes.json();
 
-        document.getElementById("total-visits").innerText = totalData.count;
-        document.getElementById("today-visits").innerText = dailyData.count;
+        document.getElementById("total-visits").innerText = totalData.value;
+        document.getElementById("today-visits").innerText = dailyData.value;
 
     } catch (error) {
         console.error("Counter error:", error);
-        document.getElementById("total-visits").innerText = "Error";
-        document.getElementById("today-visits").innerText = "Error";
     }
 }
 </script>
