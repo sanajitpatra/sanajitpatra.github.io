@@ -1,87 +1,88 @@
-@@ -1,53 +1,74 @@
-.container {
-    max-width: 800px;
-    width: 90%;
-    margin: 50px auto;
-    padding: 40px;
-
-    background: #fff9db;;   /* light yellow */
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.25);
-
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.9;
+/* ===== BODY (entire page styling) ===== */
+body {
+    font-family: 'Inter', Arial, sans-serif; /* sets clean modern font */
+    margin: 0;              /* removes default browser margin */
+    padding: 0;             /* removes default browser padding */
+    background: linear-gradient(to right, #eef2f3, #ffffff); /* soft gradient page background */
+    color: #333;            /* default text color (dark grey) */
 }
 
-.container p {
-    margin-bottom: 20px;
-}
 
-/* Header */
+/* ===== HEADER (top title section) ===== */
 header {
-    background-color: #1e3a8a;
-    color: white;
-    text-align: center;
-    padding: 25px 10px;
+    background-color: #1e3a8a; /* dark blue background */
+    color: white;              /* text color inside header */
+    text-align: center;        /* center align text */
+    padding: 25px 10px;        /* space inside header (top-bottom, left-right) */
 }
 
-/* Navigation */
+
+/* ===== NAVIGATION BAR ===== */
 nav {
-    background-color: #111827;
-    text-align: center;
-    padding: 10px;
+    background-color: #111827; /* very dark background */
+    text-align: center;        /* center links horizontally */
+    padding: 10px;             /* spacing inside navbar */
 }
 
 nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 6px 10px;
+    color: white;              /* link text color */
+    margin: 0 15px;            /* space between links */
+    text-decoration: none;     /* removes underline */
+    font-weight: bold;         /* makes links bold */
+    padding: 6px 10px;         /* clickable area padding */
 }
 
 nav a:hover,
 nav a.active {
-    background-color: #60a5fa;
-    border-radius: 5px;
+    background-color: #60a5fa; /* highlight on hover or active page */
+    border-radius: 5px;        /* rounded edges */
 }
 
-/* Sections */
-section {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background: light yellow;
-    border-radius: 8px;
+
+/* ===== MAIN CONTENT BOX (VERY IMPORTANT) ===== */
+.container {
+    max-width: 800px;          /* limits width of content */
+    width: 90%;                /* responsive width (good for small screens) */
+    margin: 50px auto;         /* centers box horizontally + adds top spacing */
+    padding: 40px;             /* inner spacing inside box */
+
+    background: #fff9db;       /* light yellow background */
+    border-radius: 12px;       /* rounded corners */
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.25); /* soft yellow shadow */
+
+    text-align: justify;       /* aligns text evenly left & right */
+    text-justify: inter-word;  /* improves spacing between words */
+    line-height: 1.9;          /* increases line spacing (readability) */
 }
 
-/* Footer */
+
+/* ===== PARAGRAPH SPACING ===== */
+.container p {
+    margin-bottom: 20px;       /* space between paragraphs */
+}
+
+
+/* ===== FOOTER ===== */
 footer {
-    text-align: center;
-    padding: 12px;
-    background-color: #111827;
-    color: white;
-    margin-top: 40px;
+    text-align: center;        /* center footer text */
+    background: #020617;       /* very dark background */
+    color: white;              /* white text */
+    padding: 15px;             /* spacing inside footer */
+    margin-top: 40px;          /* space above footer */
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    background: #020617;
-    color: white;
-    padding: 15px;
-    margin-top: 40px;
-}
 
-/* Visitor counter */
+/* ===== VISITOR COUNTER ===== */
 .visitor {
-    margin-top: 8px;
-    font-size: 14px;
-    color: #cbd5f5;
+    margin-top: 8px;           /* space above counter */
+    font-size: 14px;           /* smaller text */
+    color: #cbd5f5;            /* light bluish color */
 }
 
-#total-visits, #today-visits {
-    font-weight: bold;
-    color: #60a5fa;
+
+/* ===== COUNTER NUMBERS ===== */
+#total-visits, 
+#today-visits {
+    font-weight: bold;         /* bold numbers */
+    color: #60a5fa;            /* highlight numbers in blue */
 }
