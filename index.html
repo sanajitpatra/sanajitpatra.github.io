@@ -38,27 +38,26 @@ and combinatorics. More broadly, my research aims to connect rigorous theoretica
 <p>© 2026 Sanajit Patra | All Rights Reserved</p>
 
 <p class="visitor">
-👁 Visitors: <span id="visitor-count">Loading...</span>
+👁 Visitors: <span id="gc-pv"></span>
 </p>
 </footer>
 
 <script data-goatcounter="https://sanajitp.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
 
-    <script>
-async function loadVisitors() {
-    try {
-        const res = await fetch("https://sanajitp.goatcounter.com/counter/TOTAL.json");
-        const data = await res.json();
-
-        document.getElementById("visitor-count").innerText = data.count;
-    } catch (e) {
-        console.log(e);
-        document.getElementById("visitor-count").innerText = "N/A";
-    }
-}
-
-document.addEventListener("DOMContentLoaded", loadVisitors);
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Wait a bit for GoatCounter to load
+    setTimeout(function () {
+        if (window.goatcounter && goatcounter.visit_count) {
+            document.getElementById("gc-pv").innerText = goatcounter.visit_count;
+        } else {
+            document.getElementById("gc-pv").innerText = "—";
+        }
+    }, 1500);
+});
 </script>
+    
+
 </body>
 </html>
