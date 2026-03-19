@@ -50,21 +50,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 async function updateCounter() {
-    try {
-        const namespace = "sanajitpatra-iitkgp-2026";
-        const today = new Date().toISOString().slice(0, 10);
+    const namespace = "sanajitpatra-iitkgp-2026";
+    const today = new Date().toISOString().slice(0, 10);
 
+    try {
+        // TOTAL
         const totalRes = await fetch(`https://api.counterapi.dev/v2/${namespace}/total/up`);
         const totalData = await totalRes.json();
 
+        // DAILY
         const dailyRes = await fetch(`https://api.counterapi.dev/v2/${namespace}/${today}/up`);
         const dailyData = await dailyRes.json();
 
-        document.getElementById("total-visits").innerText = totalData.value;
-        document.getElementById("today-visits").innerText = dailyData.value;
+        console.log("TOTAL:", totalData);
+        console.log("DAILY:", dailyData);
+
+        // SAFE ACCESS (prevents undefined)
+        document.getElementById("total-visits").innerText =
+            totalData.count ?? totalData.value ?? "0";
+
+        document.getElementById("today-visits").innerText =
+            dailyData.count ?? dailyData.value ?? "0";
 
     } catch (error) {
         console.error("Counter error:", error);
+        document.getElementById("total-visits").innerText = "Error";
+        document.getElementById("today-visits").innerText = "Error";
     }
 }
 </script>
