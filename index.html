@@ -45,39 +45,26 @@ Today: <span id="today-visits">Loading...</span>
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    updateCounter();
-});
+document.addEventListener("DOMContentLoaded", async function () {
 
-async function updateCounter() {
-    const namespace = "sanajitpatra-iitkgp-2026";
+    const namespace = "sanajitpatra-main-counter"; // KEEP SAME ALWAYS
     const today = new Date().toISOString().slice(0, 10);
 
     try {
-        // TOTAL
-        const totalRes = await fetch(`https://api.counterapi.dev/v2/${namespace}/total/up`);
-        const totalData = await totalRes.json();
+        let total = await fetch(`https://api.counterapi.dev/v2/${namespace}/total/up`)
+            .then(res => res.json());
 
-        // DAILY
-        const dailyRes = await fetch(`https://api.counterapi.dev/v2/${namespace}/${today}/up`);
-        const dailyData = await dailyRes.json();
+        let daily = await fetch(`https://api.counterapi.dev/v2/${namespace}/${today}/up`)
+            .then(res => res.json());
 
-        console.log("TOTAL:", totalData);
-        console.log("DAILY:", dailyData);
+        document.getElementById("total-visits").innerText = total.count || 0;
+        document.getElementById("today-visits").innerText = daily.count || 0;
 
-        // SAFE ACCESS (prevents undefined)
-        document.getElementById("total-visits").innerText =
-            totalData.count ?? totalData.value ?? "0";
-
-        document.getElementById("today-visits").innerText =
-            dailyData.count ?? dailyData.value ?? "0";
-
-    } catch (error) {
-        console.error("Counter error:", error);
-        document.getElementById("total-visits").innerText = "Error";
-        document.getElementById("today-visits").innerText = "Error";
+    } catch (err) {
+        console.error(err);
     }
-}
+
+});
 </script>
 
 </body>
