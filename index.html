@@ -43,20 +43,22 @@ and combinatorics. More broadly, my research aims to connect rigorous theoretica
 </footer>
 
 <script data-goatcounter="https://sanajitp.goatcounter.com/count"
-        async src="https://gc.zgo.at/count.js"></script>
+        src="https://gc.zgo.at/count.js"></script>
 
 <script>
-var t = setInterval(function() {
-    if (window.goatcounter && window.goatcounter.visit_count) {
-        clearInterval(t);
-
+function loadCounter() {
+    if (window.goatcounter && goatcounter.visit_count) {
         goatcounter.visit_count({
             append: '#stats',
-            path: 'TOTAL',          // 🔥 THIS gives total site visitors
+            path: 'TOTAL',        // 🔥 total site visitors
             no_branding: true
         });
+    } else {
+        setTimeout(loadCounter, 100);
     }
-}, 100);
+}
+
+document.addEventListener("DOMContentLoaded", loadCounter);
 </script>
     
 
