@@ -1,19 +1,19 @@
-/* ===== BODY (entire page) ===== */
+/* ===== BODY ===== */
 body {
-    font-family: 'Inter', Arial, sans-serif; /* clean modern font */
-    margin: 0;                /* remove default spacing */
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
     padding: 0;
-    background: #f8fafc;      /* soft light background (better than grey) */
-    color: #333;              /* default text color */
+    background: #f8fafc;
+    color: #333;
 }
 
 
 /* ===== HEADER ===== */
 header {
-    background-color: #1e3a8a; /* deep academic blue */
+    background-color: #1e3a8a;
     color: white;
     text-align: center;
-    padding: 18px 10px;        /* reduced height (cleaner look) */
+    padding: 18px 10px;
 }
 
 header h1 {
@@ -30,7 +30,7 @@ header p {
 
 /* ===== NAVBAR ===== */
 nav {
-    background-color: #111827; /* dark navbar */
+    background-color: #111827;
     text-align: center;
     padding: 10px;
 }
@@ -46,36 +46,32 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    background-color: #60a5fa; /* highlight */
+    background-color: #60a5fa;
     border-radius: 6px;
 }
 
 
-/* ===== MAIN CONTENT BOX ===== */
+/* ===== MAIN CONTENT ===== */
 .container {
-    max-width: 900px;         /* slightly wider */
+    max-width: 900px;
     width: 92%;
-    margin: 60px auto;        /* center with spacing */
+    margin: 60px auto;
     padding: 45px;
 
-    background: #ffffff;      /* clean white (best look) */
-    border-radius: 14px;      /* smooth corners */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* soft shadow */
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 
-    text-align: left;         /* cleaner than justify */
+    text-align: left;
     line-height: 1.8;
 }
 
-
-/* ===== HEADINGS INSIDE CONTENT ===== */
 .container h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #1e3a8a;           /* matches header */
+    color: #1e3a8a;
 }
 
-
-/* ===== PARAGRAPHS ===== */
 .container p {
     font-size: 16px;
     color: #444;
@@ -86,7 +82,7 @@ nav a.active {
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
-    background: #020617;      /* very dark */
+    background: #020617;
     color: white;
     padding: 15px;
     margin-top: 40px;
@@ -100,10 +96,7 @@ footer {
     color: #cbd5f5;
 }
 
-
-/* ===== COUNTER NUMBERS ===== */
-#total-visits, 
-#today-visits {
+#stats {
     font-weight: bold;
     color: #60a5fa;
 }
