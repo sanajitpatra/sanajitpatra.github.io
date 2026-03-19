@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="zg6gcW0nBMQCV0DNFG3AVQgDTFMWgXaIUOo19vdIJKA" />
+
 <title>Sanajit Patra | PhD Student</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
@@ -24,8 +27,10 @@
     <a href="contact.html">Contact</a>    
 </nav>
 
-<section>
+<!-- ✅ FIXED: added class="container" -->
+<section class="container">
 <h2>Welcome</h2>
+
 <p>
 Welcome to my academic webpage. I am a fourth-year PhD student in the Department of Mathematics at the Indian Institute of Technology Kharagpur, working under the supervision of Prof. Ratna Dutta. 
 My research focuses on modern cryptography, particularly functional encryption, lattice-based cryptography, and code-based encryption. 
@@ -33,6 +38,7 @@ My work is centered on the design and analysis of advanced cryptographic primiti
 I am interested in constructing expressive encryption schemes and studying their underlying mathematical structures using tools from algebra, number theory, 
 and combinatorics. More broadly, my research aims to connect rigorous theoretical foundations with emerging applications in secure computation, privacy-preserving technologies, and distributed systems.
 </p>
+
 </section>
 
 <footer>
@@ -41,9 +47,9 @@ and combinatorics. More broadly, my research aims to connect rigorous theoretica
 <p class="visitor">
 👁 Visitors: <span id="stats">Loading...</span>
 </p>
-<div id="stats"></div>
 </footer>
 
+<!-- Visitor Counter Script -->
 <script data-goatcounter="https://sanajitp.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
 
@@ -66,7 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
     loadVisitors();
 });
 </script>
-    
+
+</body>
+</html>
 
 </body>
 </html>
