@@ -44,16 +44,31 @@ and combinatorics. More broadly, my research aims to connect rigorous theoretica
 <div id="stats"></div>
 </footer>
 
-<script data-goatcounter="https://sanajitp.goatcounter.com/count"
-        src="https://gc.zgo.at/count.js"></script>
-
 <script>
 function loadCounter() {
     if (window.goatcounter && goatcounter.visit_count) {
         goatcounter.visit_count({
             append: '#stats',
-            path: 'TOTAL',        // 🔥 total site visitors
-            no_branding: true
+            path: 'TOTAL',
+            no_branding: true,
+            style: `
+                div {
+                    border: none;
+                    background: none;
+                    padding: 0;
+                    margin: 0;
+                    display: inline;
+                    font-size: 1rem;
+                    color: #ddd;
+                }
+
+                #gcvc-for { display: none; }   /* remove "Views for this site" */
+                #gcvc-by { display: none; }    /* remove branding */
+                #gcvc-views { 
+                    font-weight: bold; 
+                    font-size: 1rem;
+                }
+            `
         });
     } else {
         setTimeout(loadCounter, 100);
