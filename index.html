@@ -38,14 +38,27 @@ and combinatorics. More broadly, my research aims to connect rigorous theoretica
 <p>© 2026 Sanajit Patra | All Rights Reserved</p>
 
 <p class="visitor">
-👁 Visitors: 
-<span id="busuanzi_value_site_pv">Loading...</span> | 
-📄 Page Views: 
-<span id="busuanzi_value_page_pv">Loading...</span>
+👁 Visitors: <span id="visitor-count">Loading...</span>
 </p>
 </footer>
 
-<!-- Busuanzi Script -->
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script data-goatcounter="https://sanajitp.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+
+    <script>
+async function loadVisitors() {
+    try {
+        const res = await fetch("https://sanajitp.goatcounter.com/counter/TOTAL.json");
+        const data = await res.json();
+
+        document.getElementById("visitor-count").innerText = data.count;
+    } catch (e) {
+        console.log(e);
+        document.getElementById("visitor-count").innerText = "N/A";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", loadVisitors);
+</script>
 </body>
 </html>
