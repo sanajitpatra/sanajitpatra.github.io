@@ -46,16 +46,17 @@ and combinatorics. More broadly, my research aims to connect rigorous theoretica
         async src="https://gc.zgo.at/count.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Wait a bit for GoatCounter to load
-    setTimeout(function () {
-        if (window.goatcounter && goatcounter.visit_count) {
-            document.getElementById("gc-pv").innerText = goatcounter.visit_count;
-        } else {
-            document.getElementById("gc-pv").innerText = "—";
-        }
-    }, 1500);
-});
+var t = setInterval(function() {
+    if (window.goatcounter && window.goatcounter.visit_count) {
+        clearInterval(t);
+
+        goatcounter.visit_count({
+            append: '#stats',
+            path: 'TOTAL',          // 🔥 THIS gives total site visitors
+            no_branding: true
+        });
+    }
+}, 100);
 </script>
     
 
