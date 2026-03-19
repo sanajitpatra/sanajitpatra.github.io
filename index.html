@@ -43,29 +43,13 @@ Visitors:
 Today: <span id="today-visits">Loading...</span>
 </p>
 </footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", async function () {
-
-    const namespace = "sanajitpatra-main-counter"; // KEEP SAME ALWAYS
-    const today = new Date().toISOString().slice(0, 10);
-
-    try {
-        let total = await fetch(`https://api.counterapi.dev/v2/${namespace}/total/up`)
-            .then(res => res.json());
-
-        let daily = await fetch(`https://api.counterapi.dev/v2/${namespace}/${today}/up`)
-            .then(res => res.json());
-
-        document.getElementById("total-visits").innerText = total.count || 0;
-        document.getElementById("today-visits").innerText = daily.count || 0;
-
-    } catch (err) {
-        console.error(err);
-    }
-
-});
-</script>
+<p class="visitor">
+Visitors: 
+<span id="busuanzi_value_site_pv">0</span> | 
+Page Views: <span id="busuanzi_value_page_pv">0</span>
+</p>
 
 </body>
 </html>
