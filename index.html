@@ -8,48 +8,257 @@
 
 <title>Sanajit Patra | PhD Student</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    color:#333;
+    line-height:1.8;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    background:white;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#003366;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#555;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#0056b3;
+}
+
+/* ================= MAIN SECTION ================= */
+
+.hero{
+    max-width:950px;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:60px;
+    padding:0 20px;
+}
+
+/* LEFT PANEL */
+
+.left-panel{
+    text-align:center;
+}
+
+.left-panel img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid white;
+    box-shadow:0 3px 15px rgba(0,0,0,0.15);
+}
+
+.left-panel h1{
+    margin-top:25px;
+    font-size:34px;
+}
+
+.designation{
+    color:#555;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.info{
+    margin-top:25px;
+    text-align:left;
+}
+
+.info p{
+    margin-bottom:10px;
+}
+
+.info a{
+    text-decoration:none;
+    color:#0056b3;
+}
+
+.info a:hover{
+    text-decoration:underline;
+}
+
+/* RIGHT PANEL */
+
+.right-panel h2{
+    margin-bottom:15px;
+    color:#003366;
+}
+
+.right-panel p{
+    margin-bottom:20px;
+    text-align:justify;
+}
+
+.interests{
+    margin-top:15px;
+    margin-left:20px;
+}
+
+.interests li{
+    margin-bottom:8px;
+}
+
+/* ================= SECTIONS ================= */
+
+.section{
+    max-width:950px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.section h2{
+    color:#003366;
+    margin-bottom:20px;
+}
+
+/* NEWS */
+
+.news li{
+    margin-bottom:12px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    color:#003366;
+    margin-bottom:10px;
+}
+
+/* PUBLICATIONS */
+
+.publication{
+    background:white;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:8px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.publication h3{
+    font-size:18px;
+}
+
+.publication p{
+    color:#666;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:60px;
+    text-align:center;
+    background:white;
+    padding:30px;
+    box-shadow:0 -2px 8px rgba(0,0,0,0.05);
+}
+
+.visitor{
+    margin-top:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.hero{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.info{
+    text-align:center;
+}
+
+.right-panel p{
+    text-align:left;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
 <header>
 
-<nav class="navbar">
+<nav>
 
 <div class="logo">
-<h2>Sanajit Patra</h2>
+Sanajit Patra
 </div>
 
-<ul class="nav-links">
-
-<li><a href="index.html" class="active">Home</a></li>
-
-<li><a href="research.html">Research</a></li>
-
-<li><a href="publications.html">Publications</a></li>
-
-<li><a href="courses.html">Courses</a></li>
-
-<li><a href="thesis.html">Thesis</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#">RESEARCH</a></li>
+<li><a href="#">PUBLICATIONS</a></li>
+<li><a href="#">COURSES</a></li>
+<li><a href="#">THESIS</a></li>
+<li><a href="#">CONTACT</a></li>
 </ul>
 
 </nav>
 
 </header>
-
-<!-- ================= PROFILE SECTION ================= -->
 
 <section class="hero">
 
@@ -67,46 +276,17 @@ PhD Student in Mathematics
 Indian Institute of Technology Kharagpur
 </p>
 
-<p>
-West Bengal, India
-</p>
+<div class="info">
 
-<div class="links">
+<p>📧 sanajit@iitkgp.ac.in</p>
 
-<p>
-📧
-<a href="mailto:sanajit@iitkgp.ac.in">
-sanajit@iitkgp.ac.in
-</a>
-</p>
+<p>🎓 <a href="#">Google Scholar</a></p>
 
-<p>
-🎓
-<a href="#">
-Google Scholar
-</a>
-</p>
+<p>🆔 <a href="#">ORCID</a></p>
 
-<p>
-🆔
-<a href="#">
-ORCID
-</a>
-</p>
+<p>💻 <a href="#">GitHub</a></p>
 
-<p>
-💻
-<a href="#">
-GitHub
-</a>
-</p>
-
-<p>
-📄
-<a href="CV.pdf">
-Download CV
-</a>
-</p>
+<p>📄 <a href="CV.pdf">Curriculum Vitae</a></p>
 
 </div>
 
@@ -121,20 +301,16 @@ I am a PhD student in the Department of Mathematics at the Indian Institute of T
 </p>
 
 <p>
-My research interests lie in modern public-key cryptography, with particular emphasis on Functional Encryption, Lattice-Based Cryptography, Code-Based Cryptography, and Post-Quantum Cryptography.
+My research interests include Functional Encryption, Lattice-Based Cryptography, Code-Based Cryptography, Post-Quantum Cryptography, and Anamorphic Cryptography.
 </p>
 
 <p>
-I am interested in developing efficient cryptographic constructions and exploring their mathematical foundations through algebra, number theory, coding theory, and combinatorics.
-</p>
-
-<p>
-My recent work includes research on laconic encryption, registration-based encryption, identity-based encryption, anamorphic cryptography, and code-based cryptographic primitives.
+I am interested in designing efficient cryptographic constructions and studying their mathematical foundations using tools from algebra, number theory, coding theory, and combinatorics.
 </p>
 
 <h2>Research Interests</h2>
 
-<ul>
+<ul class="interests">
 
 <li>Functional Encryption</li>
 
@@ -162,44 +338,25 @@ My recent work includes research on laconic encryption, registration-based encry
 
 </section>
 
-<!-- ================= NEWS ================= -->
-
 <section class="section">
 
 <h2>Recent News</h2>
 
 <ul class="news">
 
-<li>
-May 2026:
-Submitted research paper on Compact Fully Asynchronous Updatable Public Key Encryption.
-</li>
+<li>May 2026 — Submitted a paper on Compact Fully Asynchronous Updatable Public Key Encryption.</li>
 
-<li>
-July 2025:
-Presented research on Code-Based Laconic Encryption.
-</li>
+<li>July 2025 — Presented research on Code-Based Laconic Encryption.</li>
 
-<li>
-May 2025:
-Presented "Introduction to Classical Cryptography".
-</li>
+<li>May 2025 — Delivered a talk on Introduction to Classical Cryptography.</li>
 
-<li>
-December 2024:
-Attended ASIACRYPT 2024.
-</li>
+<li>December 2024 — Attended ASIACRYPT 2024.</li>
 
-<li>
-December 2024:
-Attended INDOCRYPT 2024.
-</li>
+<li>December 2024 — Attended INDOCRYPT 2024.</li>
 
 </ul>
 
 </section>
-
-<!-- ================= HIGHLIGHTS ================= -->
 
 <section class="section">
 
@@ -210,29 +367,27 @@ Attended INDOCRYPT 2024.
 <div class="card">
 <h3>Functional Encryption</h3>
 <p>
-Designing advanced cryptographic systems enabling fine-grained access to encrypted data.
+Fine-grained cryptographic access control and advanced encryption primitives.
 </p>
 </div>
 
 <div class="card">
 <h3>Post-Quantum Cryptography</h3>
 <p>
-Developing cryptographic schemes resistant to quantum attacks.
+Secure cryptographic systems resistant to quantum attacks.
 </p>
 </div>
 
 <div class="card">
 <h3>Code-Based Cryptography</h3>
 <p>
-Exploring secure constructions based on coding-theoretic assumptions.
+Cryptographic constructions from coding theoretic assumptions.
 </p>
 </div>
 
 </div>
 
 </section>
-
-<!-- ================= PUBLICATIONS ================= -->
 
 <section class="section">
 
@@ -262,15 +417,7 @@ Under Submission, 2026
 
 </div>
 
-<p>
-<a href="publications.html">
-View Complete Publication List →
-</a>
-</p>
-
 </section>
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -282,55 +429,8 @@ View Complete Publication List →
 Department of Mathematics, IIT Kharagpur
 </p>
 
-<p class="visitor">
-👁 Visitors:
-<span id="stats">Loading...</span>
-</p>
-
 </footer>
 
-<!-- Visitor Counter -->
-
-<script
-data-goatcounter="https://sanajitp.goatcounter.com/count"
-async
-src="https://gc.zgo.at/count.js">
-</script>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function() {
-
-async function loadVisitors() {
-
-try {
-
-const res = await fetch(
-"https://sanajitp.goatcounter.com/counter/TOTAL.json"
-);
-
-const data = await res.json();
-
-document.getElementById("stats").innerText =
-data.count;
-
-}
-
-catch(err) {
-
-document.getElementById("stats").innerText = "0";
-
-}
-
-}
-
-loadVisitors();
-
-});
-
-</script>
-
 </body>
-
 </html>
 ```
