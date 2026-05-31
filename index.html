@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,7 +19,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
+    background:#ffffff;
     color:#333;
     line-height:1.8;
 }
@@ -26,26 +27,23 @@ body{
 /* ================= NAVBAR ================= */
 
 header{
+    border-bottom:1px solid #e6e6e6;
     background:white;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-    position:sticky;
-    top:0;
-    z-index:1000;
 }
 
 nav{
-    max-width:1100px;
+    max-width:1050px;
     margin:auto;
+    padding:18px 20px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 20px;
 }
 
 .logo{
-    font-size:22px;
-    font-weight:bold;
-    color:#003366;
+    font-size:24px;
+    font-weight:700;
 }
 
 nav ul{
@@ -53,165 +51,168 @@ nav ul{
     display:flex;
 }
 
-nav ul li{
-    margin-left:25px;
+nav li{
+    margin-left:30px;
 }
 
-nav ul li a{
+nav a{
     text-decoration:none;
-    color:#555;
-    font-weight:500;
+    color:#666;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:0.5px;
 }
 
-nav ul li a:hover{
-    color:#0056b3;
+nav a:hover{
+    color:#1976d2;
 }
 
-/* ================= MAIN SECTION ================= */
+/* ================= HERO ================= */
 
 .hero{
+
     max-width:950px;
-    margin:60px auto;
-    display:grid;
-    grid-template-columns:280px 1fr;
-    gap:60px;
+    margin:70px auto;
+
     padding:0 20px;
+
+    display:grid;
+    grid-template-columns:260px 1fr;
+
+    column-gap:70px;
 }
 
-/* LEFT PANEL */
+/* LEFT */
 
-.left-panel{
+.left{
+
     text-align:center;
 }
 
-.left-panel img{
-    width:220px;
-    height:220px;
-    object-fit:cover;
+.left img{
+
+    width:200px;
+    height:200px;
+
     border-radius:50%;
-    border:4px solid white;
-    box-shadow:0 3px 15px rgba(0,0,0,0.15);
+
+    object-fit:cover;
 }
 
-.left-panel h1{
-    margin-top:25px;
-    font-size:34px;
+.left h1{
+
+    margin-top:20px;
+
+    font-size:30px;
 }
 
-.designation{
-    color:#555;
-    font-size:18px;
-    margin-bottom:10px;
+.position{
+
+    color:#666;
+
+    margin-top:5px;
 }
 
-.info{
-    margin-top:25px;
+.affiliation{
+
+    margin-top:15px;
+    font-size:15px;
+}
+
+/* LINKS */
+
+.links{
+
+    margin-top:30px;
+
     text-align:left;
 }
 
-.info p{
-    margin-bottom:10px;
-}
+.links p{
 
-.info a{
-    text-decoration:none;
-    color:#0056b3;
-}
-
-.info a:hover{
-    text-decoration:underline;
-}
-
-/* RIGHT PANEL */
-
-.right-panel h2{
-    margin-bottom:15px;
-    color:#003366;
-}
-
-.right-panel p{
-    margin-bottom:20px;
-    text-align:justify;
-}
-
-.interests{
-    margin-top:15px;
-    margin-left:20px;
-}
-
-.interests li{
-    margin-bottom:8px;
-}
-
-/* ================= SECTIONS ================= */
-
-.section{
-    max-width:950px;
-    margin:50px auto;
-    padding:0 20px;
-}
-
-.section h2{
-    color:#003366;
-    margin-bottom:20px;
-}
-
-/* NEWS */
-
-.news li{
     margin-bottom:12px;
 }
 
-/* CARDS */
+.links a{
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    color:#1976d2;
+    text-decoration:none;
 }
 
-.card{
-    background:white;
-    padding:25px;
-    border-radius:8px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+.links a:hover{
+
+    text-decoration:underline;
 }
 
-.card h3{
-    color:#003366;
-    margin-bottom:10px;
+/* RIGHT */
+
+.right h2{
+
+    margin-bottom:20px;
+
+    font-size:30px;
+
+    font-weight:400;
 }
 
-/* PUBLICATIONS */
+.right p{
 
-.publication{
-    background:white;
-    padding:20px;
-    margin-bottom:15px;
-    border-radius:8px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom:20px;
+
+    text-align:justify;
 }
 
-.publication h3{
-    font-size:18px;
+/* ================= NEWS ================= */
+
+.news{
+
+    max-width:950px;
+
+    margin:50px auto;
+
+    padding:0 20px;
 }
 
-.publication p{
-    color:#666;
+.news h2{
+
+    margin-bottom:20px;
+
+    font-size:30px;
+
+    font-weight:400;
 }
 
-/* FOOTER */
+.news ul{
+
+    list-style:none;
+}
+
+.news li{
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eeeeee;
+}
+
+.news .date{
+
+    font-weight:bold;
+    color:#1976d2;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
-    margin-top:60px;
-    text-align:center;
-    background:white;
-    padding:30px;
-    box-shadow:0 -2px 8px rgba(0,0,0,0.05);
-}
 
-.visitor{
-    margin-top:10px;
+    margin-top:80px;
+
+    border-top:1px solid #e6e6e6;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#666;
 }
 
 /* MOBILE */
@@ -219,16 +220,30 @@ footer{
 @media(max-width:800px){
 
 .hero{
+
     grid-template-columns:1fr;
+
+    row-gap:40px;
+}
+
+.links{
+
     text-align:center;
 }
 
-.info{
-    text-align:center;
-}
+.right p{
 
-.right-panel p{
     text-align:left;
+}
+
+nav{
+
+    flex-direction:column;
+}
+
+nav ul{
+
+    margin-top:15px;
 }
 
 }
@@ -248,12 +263,17 @@ Sanajit Patra
 </div>
 
 <ul>
-<li><a href="#">HOME</a></li>
-<li><a href="#">RESEARCH</a></li>
-<li><a href="#">PUBLICATIONS</a></li>
-<li><a href="#">COURSES</a></li>
-<li><a href="#">THESIS</a></li>
-<li><a href="#">CONTACT</a></li>
+
+<li><a href="index.html">HOME</a></li>
+
+<li><a href="about.html">ABOUT</a></li>
+
+<li><a href="research.html">RESEARCH</a></li>
+
+<li><a href="publications.html">PUBLICATIONS</a></li>
+
+<li><a href="contact.html">CONTACT</a></li>
+
 </ul>
 
 </nav>
@@ -262,37 +282,63 @@ Sanajit Patra
 
 <section class="hero">
 
-<div class="left-panel">
+<div class="left">
 
 <img src="sanajit.jpeg" alt="Sanajit Patra">
 
 <h1>Sanajit Patra</h1>
 
-<p class="designation">
-PhD Student in Mathematics
+<p class="position">
+PhD Student
 </p>
 
-<p>
+<p class="affiliation">
+Department of Mathematics<br>
 Indian Institute of Technology Kharagpur
 </p>
 
-<div class="info">
+<div class="links">
 
-<p>📧 sanajit@iitkgp.ac.in</p>
+<p>
+📧
+<a href="mailto:sanajit@iitkgp.ac.in">
+sanajit@iitkgp.ac.in
+</a>
+</p>
 
-<p>🎓 <a href="#">Google Scholar</a></p>
+<p>
+🎓
+<a href="#">
+Google Scholar
+</a>
+</p>
 
-<p>🆔 <a href="#">ORCID</a></p>
+<p>
+🆔
+<a href="#">
+ORCID
+</a>
+</p>
 
-<p>💻 <a href="#">GitHub</a></p>
+<p>
+💻
+<a href="#">
+GitHub
+</a>
+</p>
 
-<p>📄 <a href="CV.pdf">Curriculum Vitae</a></p>
+<p>
+📄
+<a href="CV.pdf">
+Curriculum Vitae
+</a>
+</p>
 
 </div>
 
 </div>
 
-<div class="right-panel">
+<div class="right">
 
 <h2>About Me</h2>
 
@@ -301,121 +347,44 @@ I am a PhD student in the Department of Mathematics at the Indian Institute of T
 </p>
 
 <p>
-My research interests include Functional Encryption, Lattice-Based Cryptography, Code-Based Cryptography, Post-Quantum Cryptography, and Anamorphic Cryptography.
+My research interests lie in public-key cryptography, with a particular focus on functional encryption, lattice-based cryptography, code-based cryptography, and post-quantum cryptography.
 </p>
 
 <p>
-I am interested in designing efficient cryptographic constructions and studying their mathematical foundations using tools from algebra, number theory, coding theory, and combinatorics.
+I am interested in designing efficient cryptographic constructions and studying their mathematical foundations through algebra, number theory, coding theory, and combinatorics.
 </p>
-
-<h2>Research Interests</h2>
-
-<ul class="interests">
-
-<li>Functional Encryption</li>
-
-<li>Lattice-Based Cryptography</li>
-
-<li>Code-Based Cryptography</li>
-
-<li>Post-Quantum Cryptography</li>
-
-<li>Laconic Encryption</li>
-
-<li>Anamorphic Cryptography</li>
-
-<li>Identity-Based Encryption</li>
-
-<li>Registration-Based Encryption</li>
-
-<li>Number Theory</li>
-
-<li>Algebra</li>
-
-</ul>
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="news">
 
 <h2>Recent News</h2>
 
-<ul class="news">
+<ul>
 
-<li>May 2026 — Submitted a paper on Compact Fully Asynchronous Updatable Public Key Encryption.</li>
+<li>
+<span class="date">May 2026</span> —
+Submitted a paper on Compact Fully Asynchronous Updatable Public Key Encryption.
+</li>
 
-<li>July 2025 — Presented research on Code-Based Laconic Encryption.</li>
+<li>
+<span class="date">July 2025</span> —
+Presented research on Code-Based Laconic Encryption.
+</li>
 
-<li>May 2025 — Delivered a talk on Introduction to Classical Cryptography.</li>
+<li>
+<span class="date">May 2025</span> —
+Delivered a presentation on Introduction to Classical Cryptography.
+</li>
 
-<li>December 2024 — Attended ASIACRYPT 2024.</li>
-
-<li>December 2024 — Attended INDOCRYPT 2024.</li>
+<li>
+<span class="date">December 2024</span> —
+Attended ASIACRYPT 2024 and INDOCRYPT 2024.
+</li>
 
 </ul>
-
-</section>
-
-<section class="section">
-
-<h2>Research Highlights</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Functional Encryption</h3>
-<p>
-Fine-grained cryptographic access control and advanced encryption primitives.
-</p>
-</div>
-
-<div class="card">
-<h3>Post-Quantum Cryptography</h3>
-<p>
-Secure cryptographic systems resistant to quantum attacks.
-</p>
-</div>
-
-<div class="card">
-<h3>Code-Based Cryptography</h3>
-<p>
-Cryptographic constructions from coding theoretic assumptions.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Selected Publications</h2>
-
-<div class="publication">
-
-<h3>
-A Code-Based Laconic Encryption Scheme from Quasi-Cyclic Codes
-</h3>
-
-<p>
-Conference Paper, 2025
-</p>
-
-</div>
-
-<div class="publication">
-
-<h3>
-Compact Fully Asynchronous Updatable Public Key Encryption Scheme from Hamming Quasi-Cyclic Cryptosystem
-</h3>
-
-<p>
-Under Submission, 2026
-</p>
-
-</div>
 
 </section>
 
@@ -432,5 +401,6 @@ Department of Mathematics, IIT Kharagpur
 </footer>
 
 </body>
+
 </html>
 ```
