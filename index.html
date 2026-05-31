@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sanajit Patra | PhD Student</title>
+
+<meta name="google-site-verification"
+content="zg6gcW0nBMQCV0DNFG3AVQgDTFMWgXaIUOo19vdIJKA" />
 
 <style>
 
@@ -19,13 +23,14 @@ body{
     font-family: "Segoe UI", Arial, sans-serif;
     background:#ffffff;
     color:#333;
-    line-height:1.7;
+    line-height:1.8;
 }
 
 /* ================= NAVIGATION ================= */
 
 header{
     border-bottom:1px solid #e5e5e5;
+    background:#fff;
 }
 
 nav{
@@ -34,13 +39,7 @@ nav{
     padding:18px 20px;
 
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:22px;
-    font-weight:700;
+    justify-content:center;
 }
 
 nav ul{
@@ -49,7 +48,7 @@ nav ul{
 }
 
 nav li{
-    margin-left:28px;
+    margin:0 18px;
 }
 
 nav a{
@@ -57,118 +56,164 @@ nav a{
     color:#666;
     font-size:13px;
     font-weight:600;
-    text-transform:uppercase;
     letter-spacing:1px;
+    text-transform:uppercase;
 }
 
 nav a:hover{
     color:#1976d2;
 }
 
-/* ================= MAIN ================= */
+/* ================= MAIN SECTION ================= */
 
 .hero{
-    max-width:950px;
-    margin:60px auto;
+
+    max-width:1000px;
+
+    margin:55px auto;
+
     padding:0 20px;
 
     display:grid;
-    grid-template-columns:180px 1fr;
-    gap:60px;
+
+    grid-template-columns:230px 1fr;
+
+    gap:50px;
 }
 
-/* ================= LEFT COLUMN ================= */
+/* ================= LEFT PANEL ================= */
 
 .left{
+
     text-align:center;
+
+    border-right:1px solid #e5e5e5;
+
+    padding-right:40px;
 }
 
 .left img{
+
     width:130px;
     height:130px;
 
     display:block;
-    margin:0 auto;
+    margin:auto;
 
     border-radius:50%;
+
     object-fit:cover;
 }
 
 .left h1{
+
     margin-top:18px;
+
     font-size:24px;
 }
 
 .position{
+
     color:#666;
-    margin-top:5px;
+    margin-top:4px;
 }
 
 .affiliation{
-    margin-top:15px;
+
+    margin-top:12px;
+
     font-size:14px;
 }
 
 .links{
+
     margin-top:25px;
+
     text-align:left;
 }
 
 .links p{
+
     margin-bottom:10px;
+
     font-size:14px;
 }
 
 .links a{
-    color:#1976d2;
+
     text-decoration:none;
+
+    color:#1976d2;
 }
 
 .links a:hover{
+
     text-decoration:underline;
 }
 
-/* ================= RIGHT COLUMN ================= */
+/* ================= RIGHT PANEL ================= */
 
 .about h2,
 .news h2{
-    font-size:28px;
+
+    font-size:26px;
+
     font-weight:400;
-    margin-bottom:18px;
+
+    margin-bottom:15px;
 }
 
 .about p{
+
     margin-bottom:16px;
+
     text-align:justify;
 }
 
 .news{
+
     margin-top:35px;
 }
 
 .news ul{
+
     list-style:none;
 }
 
 .news li{
-    padding:10px 0;
+
+    padding:12px 0;
+
     border-bottom:1px solid #eeeeee;
 }
 
 .news-date{
+
     color:#1976d2;
+
     font-weight:600;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-    margin-top:80px;
+
+    margin-top:70px;
+
     border-top:1px solid #e5e5e5;
+
     text-align:center;
+
     padding:25px;
+
     color:#666;
+
     font-size:14px;
+}
+
+.visitor{
+
+    margin-top:10px;
 }
 
 /* ================= MOBILE ================= */
@@ -176,24 +221,34 @@ footer{
 @media(max-width:768px){
 
 .hero{
+
     grid-template-columns:1fr;
+
     gap:40px;
 }
 
+.left{
+
+    border-right:none;
+
+    padding-right:0;
+}
+
 .links{
+
     text-align:center;
 }
 
 .about p{
+
     text-align:left;
 }
 
-nav{
-    flex-direction:column;
-}
-
 nav ul{
-    margin-top:15px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
 }
 
 }
@@ -204,25 +259,31 @@ nav ul{
 
 <body>
 
+<!-- ================= NAVIGATION ================= -->
+
 <header>
 
 <nav>
 
-<div class="logo">
-Sanajit Patra
-</div>
-
 <ul>
+
 <li><a href="index.html">Home</a></li>
+
 <li><a href="about.html">About</a></li>
+
 <li><a href="research.html">Research</a></li>
+
 <li><a href="publications.html">Publications</a></li>
+
 <li><a href="contact.html">Contact</a></li>
+
 </ul>
 
 </nav>
 
 </header>
+
+<!-- ================= MAIN CONTENT ================= -->
 
 <section class="hero">
 
@@ -240,31 +301,44 @@ PhD Student
 
 <p class="affiliation">
 Department of Mathematics<br>
-IIT Kharagpur
+Indian Institute of Technology Kharagpur
 </p>
 
 <div class="links">
 
 <p>
-📧 <a href="mailto:sanajit@iitkgp.ac.in">
+📧
+<a href="mailto:sanajit@iitkgp.ac.in">
 sanajit@iitkgp.ac.in
 </a>
 </p>
 
 <p>
-🎓 <a href="#">Google Scholar</a>
+🎓
+<a href="#">
+Google Scholar
+</a>
 </p>
 
 <p>
-🆔 <a href="#">ORCID</a>
+🆔
+<a href="#">
+ORCID
+</a>
 </p>
 
 <p>
-💻 <a href="#">GitHub</a>
+💻
+<a href="#">
+GitHub
+</a>
 </p>
 
 <p>
-📄 <a href="CV.pdf">CV</a>
+📄
+<a href="CV.pdf">
+Curriculum Vitae
+</a>
 </p>
 
 </div>
@@ -311,7 +385,7 @@ I am interested in designing efficient cryptographic constructions and studying 
 
 <li>
 <span class="news-date">May 2025</span>
- — Presented "Introduction to Classical Cryptography".
+ — Delivered a presentation on Introduction to Classical Cryptography.
 </li>
 
 <li>
@@ -327,13 +401,66 @@ I am interested in designing efficient cryptographic constructions and studying 
 
 </section>
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-<p>© 2026 Sanajit Patra</p>
+<p>
+© 2026 Sanajit Patra
+</p>
 
-<p>Department of Mathematics, IIT Kharagpur</p>
+<p>
+Department of Mathematics, IIT Kharagpur
+</p>
+
+<p class="visitor">
+👁 Visitors:
+<span id="stats">Loading...</span>
+</p>
 
 </footer>
 
+<!-- ================= VISITOR COUNTER ================= -->
+
+<script
+data-goatcounter="https://sanajitp.goatcounter.com/count"
+async
+src="https://gc.zgo.at/count.js">
+</script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    async function loadVisitors() {
+
+        try {
+
+            const res = await fetch(
+                "https://sanajitp.goatcounter.com/counter/TOTAL.json"
+            );
+
+            const data = await res.json();
+
+            document.getElementById("stats").innerText =
+                data.count;
+
+        }
+
+        catch (e) {
+
+            document.getElementById("stats").innerText = "0";
+
+        }
+
+    }
+
+    loadVisitors();
+
+});
+
+</script>
+
 </body>
+
 </html>
