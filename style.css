@@ -63,260 +63,260 @@ min-height:100vh;
 }
 
 .page{
+flex:1;
+max-width:1200px;
+margin:60px auto;
+padding:0 30px;
+}
+
+/* ================= HOMEPAGE ================= */
+
+.hero{
+max-width:1000px;
+margin:55px auto;
+padding:0 20px;
 
 ```
-flex:1;
-
-max-width:1200px;
-
-margin:60px auto;
-
-padding:0 30px;
+display:grid;
+grid-template-columns:230px 1fr;
+gap:50px;
 ```
 
 }
 
-/* ================= HEADINGS ================= */
+.left{
+text-align:center;
+border-right:1px solid #e5e5e5;
+padding-right:40px;
+}
+
+.left img{
+width:130px;
+height:130px;
+display:block;
+margin:auto;
+border-radius:50%;
+object-fit:cover;
+}
+
+.left h1{
+margin-top:18px;
+font-size:24px;
+}
+
+.position{
+color:#666;
+margin-top:4px;
+}
+
+.affiliation{
+margin-top:12px;
+font-size:14px;
+}
+
+.links{
+margin-top:30px;
+padding-left:12px;
+text-align:left;
+}
+
+.links p{
+margin-bottom:12px;
+}
+
+.links a{
+text-decoration:none;
+color:#1976d2;
+word-break:break-word;
+}
+
+.links a:hover{
+text-decoration:underline;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.about h2,
+.news h2{
+font-size:26px;
+font-weight:400;
+margin-bottom:15px;
+}
+
+.about p{
+margin-bottom:16px;
+text-align:justify;
+}
+
+.news{
+margin-top:35px;
+}
+
+.news ul{
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.news li{
+padding:12px 0;
+border-bottom:1px solid #eeeeee;
+}
+
+.news-date{
+color:#1976d2;
+font-weight:600;
+}
+
+/* ================= PAGE HEADINGS ================= */
 
 .page h1{
-
-```
 text-align:center;
-
 font-size:42px;
-
 font-weight:400;
-
 margin-bottom:40px;
-
 color:#222;
-```
-
 }
 
 .page h2{
-
-```
 margin-top:40px;
-
 margin-bottom:15px;
-
 font-size:30px;
-
 font-weight:400;
-
 color:#222;
-```
-
 }
 
 .page h3{
-
-```
 font-size:22px;
-
 font-weight:500;
-
 margin-bottom:10px;
-```
-
 }
 
 /* ================= TEXT ================= */
 
 .page p{
-
-```
 margin-bottom:18px;
-
 line-height:1.8;
-
 text-align:justify;
-```
-
 }
 
 /* ================= ENTRIES ================= */
 
 .entry{
-
-```
 padding:18px 0;
-
 border-bottom:1px solid #eeeeee;
-```
-
 }
 
 /* ================= LISTS ================= */
 
 .page ul,
 .page ol{
-
-```
 margin-left:25px;
-```
-
 }
 
 .page li{
-
-```
 margin-bottom:10px;
-```
-
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-
-```
-border-top:1px solid #e5e5e5;
-
-text-align:center;
-
-padding:25px;
-
-color:#666;
-
-font-size:14px;
-
-width:100%;
-```
-
 }
 
 /* ================= CONTACT PAGE ================= */
 
 .map-container{
-
-```
 width:100%;
-
 margin:25px 0 50px 0;
-
 border:1px solid #e5e5e5;
-
 border-radius:6px;
-
 overflow:hidden;
-```
-
 }
 
 .map-container iframe{
-
-```
 width:100%;
-
 height:450px;
-
 display:block;
-```
-
 }
 
 .contact-grid{
-
-```
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:50px;
-
 margin-top:25px;
-```
-
 }
 
 .contact-card{
-
-```
 padding:30px;
-
 border:1px solid #e5e5e5;
-
 border-radius:8px;
-
 background:#fafafa;
-```
-
 }
 
 .contact-card h3{
-
-```
 margin-bottom:15px;
-```
-
 }
 
 .contact-card p{
-
-```
 margin-bottom:15px;
-```
-
 }
 
 .contact-card a{
-
-```
 color:#1976d2;
-
 text-decoration:none;
-```
-
 }
 
 .contact-card a:hover{
-
-```
 text-decoration:underline;
-```
+}
 
+/* ================= FOOTER ================= */
+
+footer{
+border-top:1px solid #e5e5e5;
+text-align:center;
+padding:25px;
+color:#666;
+font-size:14px;
+width:100%;
+}
+
+.visitor{
+margin-top:10px;
 }
 
 /* ================= MOBILE ================= */
 
 @media(max-width:768px){
 
+```
 nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
 
-```
-flex-wrap:wrap;
+.hero{
+    grid-template-columns:1fr;
+    gap:40px;
+}
 
-justify-content:center;
+.left{
+    border-right:none;
+    padding-right:0;
+}
 
-gap:20px;
-```
-
+.links{
+    text-align:center;
+    padding-left:0;
 }
 
 .page{
-
-```
-padding:0 20px;
-```
-
+    padding:0 20px;
 }
 
 .contact-grid{
-
-```
-grid-template-columns:1fr;
-```
-
+    grid-template-columns:1fr;
 }
 
 .map-container iframe{
-
-```
-height:300px;
-```
-
+    height:300px;
 }
+```
 
 }
