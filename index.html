@@ -1,102 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sanajit Patra | PhD Student</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#ffffff;
+    color:#333;
+    line-height:1.7;
+}
+
+/* ================= NAVIGATION ================= */
+
+header{
+    border-bottom:1px solid #e5e5e5;
+}
+
+nav{
+    max-width:1000px;
+    margin:auto;
+    padding:18px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav li{
+    margin-left:28px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#666;
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+nav a:hover{
+    color:#1976d2;
+}
+
+/* ================= MAIN ================= */
+
+.hero{
+    max-width:950px;
+    margin:60px auto;
+    padding:0 20px;
+
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:60px;
+}
+
+/* ================= LEFT COLUMN ================= */
+
+.left{
+    text-align:center;
+}
+
+.left img{
+    width:130px;
+    height:130px;
+
+    display:block;
+    margin:0 auto;
+
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.left h1{
+    margin-top:18px;
+    font-size:24px;
+}
+
+.position{
+    color:#666;
+    margin-top:5px;
+}
+
+.affiliation{
+    margin-top:15px;
+    font-size:14px;
+}
+
+.links{
+    margin-top:25px;
+    text-align:left;
+}
+
+.links p{
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.links a{
+    color:#1976d2;
+    text-decoration:none;
+}
+
+.links a:hover{
+    text-decoration:underline;
+}
+
+/* ================= RIGHT COLUMN ================= */
+
+.about h2,
+.news h2{
+    font-size:28px;
+    font-weight:400;
+    margin-bottom:18px;
+}
+
+.about p{
+    margin-bottom:16px;
+    text-align:justify;
+}
+
+.news{
+    margin-top:35px;
+}
+
+.news ul{
+    list-style:none;
+}
+
+.news li{
+    padding:10px 0;
+    border-bottom:1px solid #eeeeee;
+}
+
+.news-date{
+    color:#1976d2;
+    font-weight:600;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    margin-top:80px;
+    border-top:1px solid #e5e5e5;
+    text-align:center;
+    padding:25px;
+    color:#666;
+    font-size:14px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.hero{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.links{
+    text-align:center;
+}
+
+.about p{
+    text-align:left;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+Sanajit Patra
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
 <section class="hero">
 
-    <!-- LEFT COLUMN -->
+<!-- LEFT SIDE -->
 
-    <div class="left">
+<div class="left">
 
-        <img src="sanajit.jpeg" alt="Sanajit Patra">
+<img src="sanajit.jpeg" alt="Sanajit Patra">
 
-        <h1>Sanajit Patra</h1>
+<h1>Sanajit Patra</h1>
 
-        <p class="position">
-            PhD Student
-        </p>
+<p class="position">
+PhD Student
+</p>
 
-        <p class="affiliation">
-            Department of Mathematics<br>
-            Indian Institute of Technology Kharagpur
-        </p>
+<p class="affiliation">
+Department of Mathematics<br>
+IIT Kharagpur
+</p>
 
-        <div class="links">
+<div class="links">
 
-            <p>
-                📧 <a href="mailto:sanajit@iitkgp.ac.in">
-                sanajit@iitkgp.ac.in
-                </a>
-            </p>
+<p>
+📧 <a href="mailto:sanajit@iitkgp.ac.in">
+sanajit@iitkgp.ac.in
+</a>
+</p>
 
-            <p>
-                🎓 <a href="#">Google Scholar</a>
-            </p>
+<p>
+🎓 <a href="#">Google Scholar</a>
+</p>
 
-            <p>
-                🆔 <a href="#">ORCID</a>
-            </p>
+<p>
+🆔 <a href="#">ORCID</a>
+</p>
 
-            <p>
-                💻 <a href="#">GitHub</a>
-            </p>
+<p>
+💻 <a href="#">GitHub</a>
+</p>
 
-            <p>
-                📄 <a href="CV.pdf">Curriculum Vitae</a>
-            </p>
+<p>
+📄 <a href="CV.pdf">CV</a>
+</p>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
-    <!-- RIGHT COLUMN -->
+<!-- RIGHT SIDE -->
 
-    <div class="right">
+<div class="right">
 
-        <div class="about">
+<div class="about">
 
-            <h2>About Me</h2>
+<h2>About Me</h2>
 
-            <p>
-            I am a PhD student in the Department of Mathematics at the Indian Institute of Technology Kharagpur under the supervision of Prof. Ratna Dutta.
-            </p>
+<p>
+I am a PhD student in the Department of Mathematics at the Indian Institute of Technology Kharagpur under the supervision of Prof. Ratna Dutta.
+</p>
 
-            <p>
-            My research interests lie in public-key cryptography, particularly functional encryption, lattice-based cryptography, code-based cryptography, and post-quantum cryptography.
-            </p>
+<p>
+My research interests lie in public-key cryptography, particularly functional encryption, lattice-based cryptography, code-based cryptography, and post-quantum cryptography.
+</p>
 
-            <p>
-            I am interested in designing efficient cryptographic constructions and understanding their mathematical foundations through algebra, number theory, coding theory, and combinatorics.
-            </p>
+<p>
+I am interested in designing efficient cryptographic constructions and studying their mathematical foundations through algebra, number theory, coding theory, and combinatorics.
+</p>
 
-        </div>
+</div>
 
-        <div class="news">
+<div class="news">
 
-            <h2>Recent News</h2>
+<h2>Recent News</h2>
 
-            <ul>
+<ul>
 
-                <li>
-                    <span class="news-date">May 2026</span>
-                    — Submitted a paper on Compact Fully Asynchronous Updatable Public Key Encryption.
-                </li>
+<li>
+<span class="news-date">May 2026</span>
+ — Submitted a paper on Compact Fully Asynchronous Updatable Public Key Encryption.
+</li>
 
-                <li>
-                    <span class="news-date">July 2025</span>
-                    — Presented research on Code-Based Laconic Encryption.
-                </li>
+<li>
+<span class="news-date">July 2025</span>
+ — Presented research on Code-Based Laconic Encryption.
+</li>
 
-                <li>
-                    <span class="news-date">May 2025</span>
-                    — Delivered a presentation on Introduction to Classical Cryptography.
-                </li>
+<li>
+<span class="news-date">May 2025</span>
+ — Presented "Introduction to Classical Cryptography".
+</li>
 
-                <li>
-                    <span class="news-date">December 2024</span>
-                    — Attended ASIACRYPT 2024 and INDOCRYPT 2024.
-                </li>
+<li>
+<span class="news-date">December 2024</span>
+ — Attended ASIACRYPT 2024 and INDOCRYPT 2024.
+</li>
 
-            </ul>
+</ul>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
+
+<footer>
+
+<p>© 2026 Sanajit Patra</p>
+
+<p>Department of Mathematics, IIT Kharagpur</p>
+
+</footer>
+
+</body>
+</html>
