@@ -2,464 +2,1589 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanajit Patra | PhD Student</title>
 
-<title>Sanajit Patra | PhD Student</title>
+    <meta name="google-site-verification"
+          content="zg6gcW0nBMQCV0DNFG3AVQgDTFMWgXaIUOo19vdIJKA">
 
-<meta name="google-site-verification"
-content="zg6gcW0nBMQCV0DNFG3AVQgDTFMWgXaIUOo19vdIJKA" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<style>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+          rel="stylesheet">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
-body{
-    font-family: "Segoe UI", Arial, sans-serif;
-    background:#ffffff;
-    color:#333;
-    line-height:1.8;
-}
+    <style>
 
-/* ================= NAVIGATION ================= */
+        /* =========================================================
+           ROOT
+        ========================================================= */
 
-header{
-    border-bottom:1px solid #e5e5e5;
-    background:#fff;
-}
+        :root {
+            --maroon: #731f35;
+            --maroon-dark: #541525;
+            --maroon-light: #f8f1f3;
 
-nav{
-    max-width:1000px;
-    margin:auto;
-    padding:18px 20px;
+            --gold: #b89a5a;
 
-    display:flex;
-    justify-content:center;
-}
+            /* Light blue for About section */
+            --blue-light: #f2f8fc;
+            --blue-border: #b9d7e8;
 
-nav ul{
-    display:flex;
-    list-style:none;
-}
+            --ink: #20262b;
+            --text: #465058;
+            --muted: #778089;
 
-nav li{
-    margin:0 18px;
-}
+            --background: #ffffff;
+            --surface: #f7f8f9;
+            --surface-2: #fbfaf9;
 
-nav a{
-    text-decoration:none;
-    color:#666;
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
+            --border: #e4e7e9;
 
-nav a:hover{
-    color:#1976d2;
-}
+            --max-width: 1500px;
+        }
 
-/* ================= MAIN SECTION ================= */
 
-.hero{
+        /* =========================================================
+           RESET
+        ========================================================= */
 
-    max-width:1000px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    margin:55px auto;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    padding:0 20px;
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--background);
+            line-height: 1.7;
+            font-size: 16px;
+        }
 
-    display:grid;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    grid-template-columns:230px 1fr;
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-    gap:50px;
-}
 
-/* ================= LEFT PANEL ================= */
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
 
-.left{
+        .navbar {
+            height: 76px;
 
-    text-align:center;
+            border-bottom: 1px solid var(--border);
 
-    border-right:1px solid #e5e5e5;
+            background: rgba(255,255,255,0.97);
 
-    padding-right:40px;
-}
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
-.left img{
+            backdrop-filter: blur(10px);
+        }
 
-    width:130px;
-    height:130px;
+        .nav-inner {
+            max-width: var(--max-width);
 
-    display:block;
-    margin:auto;
+            height: 100%;
 
-    border-radius:50%;
+            margin: auto;
 
-    object-fit:cover;
-}
+            padding: 0 35px;
 
-.left h1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    margin-top:18px;
+        .logo {
+            font-family: "Libre Baskerville", serif;
 
-    font-size:24px;
-}
+            font-size: 21px;
+            font-weight: 700;
 
-.position{
+            color: var(--maroon);
 
-    color:#666;
-    margin-top:4px;
-}
+            letter-spacing: -0.3px;
+        }
 
-.affiliation{
+        .nav-links {
+            display: flex;
+            align-items: center;
 
-    margin-top:12px;
+            gap: 34px;
+        }
 
-    font-size:14px;
-}
+        .nav-links a {
+            position: relative;
 
-.links{
-    margin-top:30px;
-    padding-left:5px;
-    text-align:left;
-}
+            font-size: 14px;
+            font-weight: 500;
 
-.links p{
-    margin-bottom:12px;
-}
+            color: #454c51;
 
-.links p{
+            padding: 27px 0;
+        }
 
-    margin-bottom:10px;
+        .nav-links a::after {
+            content: "";
 
-    font-size:14px;
-}
+            position: absolute;
 
-.links a{
+            left: 0;
+            bottom: 17px;
 
-    text-decoration:none;
+            width: 0;
+            height: 2px;
 
-    color:#1976d2;
-}
+            background: var(--maroon);
 
-.links a:hover{
+            transition: width 0.25s ease;
+        }
 
-    text-decoration:underline;
-}
-    .links a{
-    word-break:break-word;
-}
+        .nav-links a:hover {
+            color: var(--maroon);
+        }
 
-/* ================= RIGHT PANEL ================= */
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-.about h2,
-.news h2{
 
-    font-size:26px;
+        /* =========================================================
+           HERO
+        ========================================================= */
 
-    font-weight:400;
+        .hero {
+            position: relative;
 
-    margin-bottom:15px;
-}
+            min-height: 410px;
 
-.about p{
+            overflow: hidden;
 
-    margin-bottom:16px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(50, 10, 22, 0.88),
+                    rgba(80, 20, 38, 0.72),
+                    rgba(60, 15, 28, 0.55)
+                ),
+                url("iitkgp.jpg");
 
-    text-align:justify;
-}
+            background-size: cover;
+            background-position: center;
+        }
 
-.news{
+        .hero-inner {
+            max-width: var(--max-width);
 
-    margin-top:35px;
-}
+            min-height: 410px;
 
-.news ul{
+            margin: auto;
 
-    list-style:none;
-}
+            padding: 65px 35px;
 
-.news li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-    padding:12px 0;
+            gap: 70px;
+        }
 
-    border-bottom:1px solid #eeeeee;
-}
+        .hero-content {
+            max-width: 760px;
+        }
 
-.news-date{
+        .hero-kicker {
+            color: #ead9aa;
 
-    color:#1976d2;
+            text-transform: uppercase;
+            letter-spacing: 3px;
 
-    font-weight:600;
-}
+            font-size: 13px;
+            font-weight: 600;
 
-/* ================= FOOTER ================= */
+            margin-bottom: 17px;
+        }
 
-footer{
+        .hero h1 {
+            color: white;
 
-    margin-top:70px;
+            font-family: "Libre Baskerville", serif;
 
-    border-top:1px solid #e5e5e5;
+            font-size: clamp(46px, 6vw, 78px);
 
-    text-align:center;
+            line-height: 1.08;
 
-    padding:25px;
+            font-weight: 400;
 
-    color:#666;
+            margin-bottom: 20px;
+        }
 
-    font-size:14px;
-}
+        .hero-institute {
+            color: white;
 
-.visitor{
+            font-size: 21px;
+            font-weight: 500;
 
-    margin-top:10px;
-}
+            margin-bottom: 23px;
+        }
 
-/* ================= MOBILE ================= */
+        .hero-line {
+            width: 70px;
+            height: 3px;
 
-@media(max-width:768px){
+            background: var(--gold);
 
-.hero{
+            margin-bottom: 23px;
+        }
 
-    grid-template-columns:1fr;
+        .hero-description {
+            color: rgba(255,255,255,0.88);
 
-    gap:40px;
-}
+            max-width: 680px;
 
-.left{
+            font-size: 17px;
 
-    border-right:none;
+            line-height: 1.8;
+        }
 
-    padding-right:0;
-}
+        .hero-quote {
+            max-width: 310px;
 
-.links{
+            padding-left: 30px;
 
-    text-align:center;
-}
+            border-left: 1px solid rgba(255,255,255,0.35);
 
-.about p{
+            color: rgba(255,255,255,0.82);
 
-    text-align:left;
-}
+            font-family: "Libre Baskerville", serif;
 
-nav ul{
+            font-size: 14px;
 
-    flex-wrap:wrap;
+            line-height: 1.8;
+        }
 
-    justify-content:center;
-}
+        .hero-quote span {
+            display: block;
 
-}
+            margin-top: 13px;
 
-</style>
+            color: #e5d5a5;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =========================================================
+           MAIN
+        ========================================================= */
+
+        main {
+            max-width: var(--max-width);
+
+            margin: auto;
+
+            padding: 80px 35px 100px;
+        }
+
+
+        /*
+           THREE COLUMN LAYOUT
+
+           LEFT   = Profile
+           MIDDLE = About / Research
+           RIGHT  = Recent News
+        */
+
+        .home-layout {
+            display: grid;
+
+            grid-template-columns:
+                220px
+                minmax(500px, 1fr)
+                285px;
+
+            gap: 65px;
+
+            align-items: start;
+        }
+
+
+        /* =========================================================
+           PROFILE — LEFT
+        ========================================================= */
+
+        .profile {
+            position: sticky;
+
+            top: 110px;
+        }
+
+        .profile-photo {
+            width: 175px;
+            height: 175px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 5px solid white;
+
+            box-shadow:
+                0 0 0 1px var(--border),
+                0 15px 35px rgba(0,0,0,0.10);
+
+            margin-bottom: 25px;
+        }
+
+        .profile-name {
+            font-family: "Libre Baskerville", serif;
+
+            font-size: 25px;
+
+            color: var(--ink);
+
+            margin-bottom: 5px;
+        }
+
+        .profile-role {
+            color: var(--maroon);
+
+            font-size: 14px;
+            font-weight: 600;
+
+            margin-bottom: 18px;
+        }
+
+        .profile-affiliation {
+            color: var(--text);
+
+            font-size: 14px;
+
+            line-height: 1.65;
+
+            margin-bottom: 24px;
+        }
+
+        .profile-links {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .profile-links a {
+            color: var(--muted);
+
+            font-size: 13px;
+            font-weight: 500;
+
+            transition: 0.2s ease;
+        }
+
+        .profile-links a:hover {
+            color: var(--maroon);
+
+            transform: translateX(3px);
+        }
+
+        .profile-links a::before {
+            content: "↗";
+
+            margin-right: 8px;
+
+            color: var(--gold);
+        }
+
+
+        /* =========================================================
+           MIDDLE CONTENT
+        ========================================================= */
+
+        .content {
+            min-width: 0;
+        }
+
+        .section {
+            margin-bottom: 72px;
+        }
+
+        .section-label {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            color: var(--maroon);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 16px;
+        }
+
+        .section-label::after {
+            content: "";
+
+            width: 45px;
+            height: 1px;
+
+            background: var(--gold);
+        }
+
+        .section h2 {
+            font-family: "Libre Baskerville", serif;
+
+            color: var(--ink);
+
+            font-size: 31px;
+
+            font-weight: 400;
+
+            margin-bottom: 23px;
+        }
+
+        .section p {
+            max-width: 900px;
+
+            font-size: 16px;
+
+            color: var(--text);
+
+            line-height: 1.9;
+        }
+
+        .section p + p {
+            margin-top: 15px;
+        }
+
+
+        /* =========================================================
+           ABOUT ME — LIGHT BLUE BLOCK
+        ========================================================= */
+
+        .about-section {
+            background: var(--blue-light);
+
+            padding: 32px 38px 34px;
+
+            border-left: 4px solid var(--blue-border);
+
+            /*
+               IMPORTANT:
+               Same margin-left as Research section
+               so both blocks align perfectly.
+            */
+            margin-left: 0;
+
+            margin-bottom: 72px;
+        }
+
+        .about-section h2 {
+            margin-bottom: 23px;
+        }
+
+        .about-section p {
+            max-width: 900px;
+        }
+
+
+        /* =========================================================
+           RESEARCH — MAROON BLOCK
+        ========================================================= */
+
+        .research-section {
+            background: var(--maroon-light);
+
+            padding: 42px 45px;
+
+            border-left: 4px solid var(--maroon);
+
+            /*
+               IMPORTANT:
+               Do NOT shift this section to the left.
+               It is now aligned exactly with About.
+            */
+            margin-left: 0;
+
+            margin-bottom: 72px;
+        }
+
+        .research-section p {
+            margin-bottom: 32px;
+        }
+
+        .research-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            border-top: 1px solid #e5d8dc;
+        }
+
+        .research-item {
+            padding: 20px 15px;
+
+            border-bottom: 1px solid #e5d8dc;
+
+            color: var(--ink);
+
+            font-family: "Libre Baskerville", serif;
+
+            font-size: 15px;
+
+            transition: 0.2s ease;
+        }
+
+        .research-item:nth-child(odd) {
+            border-right: 1px solid #e5d8dc;
+        }
+
+        .research-item:hover {
+            color: var(--maroon);
+
+            padding-left: 20px;
+        }
+
+        .research-item span {
+            display: block;
+
+            color: var(--muted);
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 12px;
+
+            margin-top: 4px;
+        }
+
+
+        /* =========================================================
+           RECENT NEWS — RIGHT
+        ========================================================= */
+
+        .recent-news {
+            position: sticky;
+
+            top: 110px;
+
+            padding: 30px 27px;
+
+            background: #faf8f8;
+
+            border: 1px solid var(--border);
+
+            border-top: 3px solid var(--maroon);
+        }
+
+        .recent-news .section-label {
+            margin-bottom: 12px;
+        }
+
+        .recent-news h2 {
+            font-family: "Libre Baskerville", serif;
+
+            color: var(--ink);
+
+            font-size: 25px;
+
+            font-weight: 400;
+
+            line-height: 1.35;
+
+            margin-bottom: 23px;
+        }
+
+        .recent-news-list {
+            border-top: 1px solid var(--border);
+        }
+
+        .recent-news-item {
+            padding: 19px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .recent-news-date {
+            color: var(--maroon);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.1px;
+
+            margin-bottom: 7px;
+        }
+
+        .recent-news-title {
+            color: var(--ink);
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            line-height: 1.55;
+
+            margin-bottom: 5px;
+        }
+
+        .recent-news-description {
+            color: var(--muted);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+        .recent-news-tag {
+            display: inline-block;
+
+            margin-top: 8px;
+
+            padding: 3px 8px;
+
+            border: 1px solid #d9c8ce;
+
+            border-radius: 3px;
+
+            color: var(--maroon);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.8px;
+        }
+
+
+        /* =========================================================
+           QUICK LINKS
+        ========================================================= */
+
+        .quick-links {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 14px;
+
+            margin-top: 20px;
+        }
+
+        .quick-link {
+            padding: 18px 20px;
+
+            border: 1px solid var(--border);
+
+            background: white;
+
+            transition: 0.25s ease;
+        }
+
+        .quick-link:hover {
+            border-color: var(--maroon);
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        }
+
+        .quick-link strong {
+            display: block;
+
+            color: var(--ink);
+
+            font-size: 14px;
+
+            margin-bottom: 3px;
+        }
+
+        .quick-link span {
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #f5f6f7;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+
+            margin: auto;
+
+            padding: 30px 35px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .footer-left {
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+        .footer-left strong {
+            color: var(--maroon);
+
+            font-weight: 600;
+        }
+
+        #stats {
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media (max-width: 1200px) {
+
+            :root {
+                --max-width: 1200px;
+            }
+
+            .home-layout {
+                grid-template-columns:
+                    205px
+                    minmax(450px, 1fr)
+                    260px;
+
+                gap: 40px;
+            }
+
+            .profile-photo {
+                width: 160px;
+                height: 160px;
+            }
+
+            .recent-news {
+                padding: 27px 23px;
+            }
+        }
+
+
+        /* =========================================================
+           SMALL TABLET
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .hero-quote {
+                display: none;
+            }
+
+            .home-layout {
+                grid-template-columns:
+                    210px
+                    minmax(0, 1fr);
+
+                gap: 50px;
+            }
+
+            .recent-news {
+                grid-column: 1 / -1;
+
+                position: static;
+
+                display: block;
+            }
+
+            .recent-news-list {
+                display: grid;
+
+                grid-template-columns: repeat(3, 1fr);
+
+                gap: 25px;
+
+                border-top: none;
+            }
+
+            .recent-news-item {
+                border-top: 1px solid var(--border);
+            }
+
+            .quick-links {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                height: auto;
+            }
+
+            .nav-inner {
+                padding: 18px 20px;
+
+                flex-direction: column;
+
+                gap: 13px;
+            }
+
+            .nav-links {
+                gap: 20px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .nav-links a {
+                padding: 3px 0;
+            }
+
+            .nav-links a::after {
+                bottom: -2px;
+            }
+
+
+            /* HERO */
+
+            .hero {
+                min-height: 350px;
+            }
+
+            .hero-inner {
+                min-height: 350px;
+
+                padding: 55px 22px;
+            }
+
+            .hero h1 {
+                font-size: 47px;
+            }
+
+            .hero-institute {
+                font-size: 17px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+
+            /* MAIN */
+
+            main {
+                padding: 55px 22px 70px;
+            }
+
+            .home-layout {
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 55px;
+            }
+
+            .profile,
+            .content,
+            .recent-news {
+                width: 100%;
+            }
+
+            .profile {
+                position: static;
+
+                padding-bottom: 35px;
+
+                border-bottom: 1px solid var(--border);
+            }
+
+            .profile-photo {
+                width: 145px;
+                height: 145px;
+            }
+
+
+            /* ABOUT */
+
+            .about-section {
+                padding: 28px 25px 30px;
+
+                margin-left: 0;
+
+                margin-bottom: 60px;
+            }
+
+
+            /* RESEARCH */
+
+            .research-section {
+                padding: 30px 25px;
+
+                margin-left: 0;
+
+                margin-bottom: 60px;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .research-item:nth-child(odd) {
+                border-right: none;
+            }
+
+
+            /* NEWS */
+
+            .recent-news {
+                padding: 28px 24px;
+            }
+
+            .recent-news-list {
+                display: block;
+            }
+
+            .recent-news-item {
+                padding: 18px 0;
+            }
+
+
+            /* FOOTER */
+
+            .footer-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+        }
+
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+        @media (max-width: 430px) {
+
+            .nav-links {
+                gap: 13px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .section h2 {
+                font-size: 27px;
+            }
+
+            .about-section {
+                padding: 25px 20px 27px;
+            }
+
+            .research-section {
+                padding: 25px 20px;
+            }
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-<!-- ================= NAVIGATION ================= -->
 
-<header>
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-<nav>
+<header class="navbar">
 
-<ul>
+    <div class="nav-inner">
 
-<li><a href="index.html">Home</a></li>
+        <a href="index.html" class="logo">
+            Sanajit Patra
+        </a>
 
-<!-- <li><a href="about.html">About</a></li> -->
+        <nav class="nav-links">
 
-<li><a href="research.html">Research</a></li>
+            <a href="index.html">
+                Home
+            </a>
 
-<li><a href="publications.html">Publications</a></li>
+            <a href="research.html">
+                Research
+            </a>
 
-<li><a href="contact.html">Contact</a></li>
+            <a href="publications.html">
+                Publications
+            </a>
 
-</ul>
+            <a href="contact.html">
+                Contact
+            </a>
 
-</nav>
+        </nav>
+
+    </div>
 
 </header>
 
-<!-- ================= MAIN CONTENT ================= -->
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero">
 
-<!-- LEFT SIDE -->
+    <div class="hero-inner">
 
-<div class="left">
+        <div class="hero-content">
 
-<img src="sanajit.jpeg" alt="Sanajit Patra">
+            <div class="hero-kicker">
+                Department of Mathematics
+            </div>
 
-<h1>Sanajit Patra</h1>
+            <h1>
+                Mathematics
+            </h1>
 
-<p class="position">
-PhD Student
-</p>
+            <div class="hero-institute">
+                Indian Institute of Technology Kharagpur
+            </div>
 
-<p class="affiliation">
-Department of Mathematics<br>
-Indian Institute of Technology Kharagpur
-</p>
+            <div class="hero-line"></div>
 
-<div class="links">
+            <p class="hero-description">
+                Research in modern public-key cryptography,
+                functional encryption, registration-based encryption,
+                anamorphic encryption, and lattice-based cryptography.
+            </p>
 
-<p>
-📧
-<a href="mailto:sanajitpatra@kgpian.iitkgp.ac.in">
-sanajitpatra@kgpian.iitkgp.ac.in
-</a>
-</p>
-
-<p>
-🎓
-<a href="https://scholar.google.com/citations?hl=en&user=OY_pf8MAAAAJ">
-Google Scholar
-</a>
-</p>
-
-<p>
-🆔
-<a href="#">
-ORCID
-</a>
-</p>
-
-<p>
-💻
-<a href="#">
-GitHub
-</a>
-</p>
-
-<p>
-📄
-<a href="CV.pdf">
-Curriculum Vitae
-</a>
-</p>
-
-</div>
-
-</div>
-
-<!-- RIGHT SIDE -->
-
-<div class="right">
-
-<div class="about">
-
-<h2>About Me</h2>
-
-<p>
-I am a PhD student in the Department of Mathematics at the Indian Institute of Technology Kharagpur under the supervision of Prof. Ratna Dutta. Previously, I completed post-graduation from Ramakrishna Mission vivekananda Educational and Research Institute (RKMVERI), Belur in pure Mathematics. My graduation is from Midnapore college (autonomous) with hons. in Mathematics.
-</p>
-
-<p>
-My research interests lie in public-key cryptography, particularly functional encryption, registration based encryption, anamorphic encryption, lattice-based cryptography.
-</p>
+        </div>
 
 
-</div>
+        <div class="hero-quote">
 
-<div class="news">
+            "The beauty of mathematics only shows
+            itself to more patient followers."
 
-<h2>Recent News</h2>
+            <span>
+                — Maryam Mirzakhani
+            </span>
 
-<ul>
+        </div>
 
-<li>
-<span class="news-date">May 2026</span>
- — Preprint: Compact Fully Asynchronous Updatable Public Key Encryption.
-</li>
-
-
-
-<li>
-<span class="news-date">Dec 2025</span>
- — Attended INDOCRYPT 2025
-</li>
-
-<li>
-<span class="news-date">December 2024</span>
- — Attended ASIACRYPT 2024 and INDOCRYPT 2024.
-</li>
-
-</ul>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main>
+
+    <div class="home-layout">
+
+
+        <!-- =====================================================
+             PROFILE — LEFT
+        ====================================================== -->
+
+        <aside class="profile">
+
+            <img
+                src="sanajit.jpeg"
+                alt="Sanajit Patra"
+                class="profile-photo"
+            >
+
+            <h2 class="profile-name">
+                Sanajit Patra
+            </h2>
+
+            <div class="profile-role">
+                PhD Student
+            </div>
+
+            <div class="profile-affiliation">
+
+                Department of Mathematics<br>
+
+                Indian Institute of Technology Kharagpur
+
+            </div>
+
+
+            <div class="profile-links">
+
+                <a href="mailto:sanajitpatra@kgpian.iitkgp.ac.in">
+                    Email
+                </a>
+
+                <a
+                    href="https://scholar.google.com/citations?hl=en&user=OY_pf8MAAAAJ"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Google Scholar
+                </a>
+
+                <a href="#" target="_blank">
+                    ORCID
+                </a>
+
+                <a href="#" target="_blank">
+                    GitHub
+                </a>
+
+                <a href="CV.pdf" target="_blank">
+                    Curriculum Vitae
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================================
+             MIDDLE CONTENT
+        ====================================================== -->
+
+        <div class="content">
+
+
+            <!-- =================================================
+                 ABOUT
+            ================================================== -->
+
+            <section class="section about-section">
+
+                <div class="section-label">
+                    About
+                </div>
+
+                <h2>
+                    About Me
+                </h2>
+
+                <p>
+                    I am a PhD student in the Department of Mathematics
+                    at the Indian Institute of Technology Kharagpur
+                    under the supervision of Prof. Ratna Dutta.
+                </p>
+
+                <p>
+                    Previously, I completed my post-graduation from
+                    Ramakrishna Mission Vivekananda Educational and
+                    Research Institute (RKMVERI), Belur, in Pure
+                    Mathematics. I completed my graduation from
+                    Midnapore College (Autonomous) with Honours in
+                    Mathematics.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESEARCH
+            ================================================== -->
+
+            <section class="section research-section">
+
+                <div class="section-label">
+                    Research
+                </div>
+
+                <h2>
+                    Research Interests
+                </h2>
+
+                <p>
+                    My research interests lie in public-key cryptography,
+                    particularly in the design and analysis of modern
+                    cryptographic primitives.
+                </p>
+
+
+                <div class="research-grid">
+
+
+                    <div class="research-item">
+
+                        Public-Key Cryptography
+
+                        <span>
+                            Modern cryptographic constructions
+                        </span>
+
+                    </div>
+
+
+                    <div class="research-item">
+
+                        Functional Encryption
+
+                        <span>
+                            Privacy-preserving computation
+                        </span>
+
+                    </div>
+
+
+                    <div class="research-item">
+
+                        Registration-Based Encryption
+
+                        <span>
+                            Flexible public-key infrastructures
+                        </span>
+
+                    </div>
+
+
+                    <div class="research-item">
+
+                        Anamorphic Encryption
+
+                        <span>
+                            Advanced encryption techniques
+                        </span>
+
+                    </div>
+
+
+                    <div class="research-item">
+
+                        Lattice-Based Cryptography
+
+                        <span>
+                            Post-quantum cryptography
+                        </span>
+
+                    </div>
+
+
+                    <div class="research-item">
+
+                        Cryptographic Primitives
+
+                        <span>
+                            Design and security analysis
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACADEMIC PROFILE
+            ================================================== -->
+
+            <section class="section">
+
+                <div class="section-label">
+                    Explore
+                </div>
+
+                <h2>
+                    Academic Profile
+                </h2>
+
+
+                <div class="quick-links">
+
+
+                    <a
+                        href="research.html"
+                        class="quick-link"
+                    >
+
+                        <strong>
+                            Research
+                        </strong>
+
+                        <span>
+                            Research interests and projects
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="publications.html"
+                        class="quick-link"
+                    >
+
+                        <strong>
+                            Publications
+                        </strong>
+
+                        <span>
+                            Papers and research work
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="contact.html"
+                        class="quick-link"
+                    >
+
+                        <strong>
+                            Contact
+                        </strong>
+
+                        <span>
+                            Get in touch
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             RECENT NEWS — RIGHT
+        ====================================================== -->
+
+        <aside class="recent-news">
+
+            <div class="section-label">
+                Updates
+            </div>
+
+            <h2>
+                Recent News
+            </h2>
+
+
+            <div class="recent-news-list">
+
+
+                <!-- NEWS 1 -->
+
+                <div class="recent-news-item">
+
+                    <div class="recent-news-date">
+                        May 2026
+                    </div>
+
+                    <div class="recent-news-title">
+                        Compact Fully Asynchronous Updatable
+                        Public Key Encryption
+                    </div>
+
+                    <div class="recent-news-description">
+                        A new preprint on updatable public-key
+                        encryption.
+                    </div>
+
+                    <span class="recent-news-tag">
+                        Preprint
+                    </span>
+
+                </div>
+
+
+                <!-- NEWS 2 -->
+
+                <div class="recent-news-item">
+
+                    <div class="recent-news-date">
+                        Dec 2025
+                    </div>
+
+                    <div class="recent-news-title">
+                        Attended INDOCRYPT 2025
+                    </div>
+
+                    <div class="recent-news-description">
+                        Participated in the International
+                        Conference on Cryptology in India.
+                    </div>
+
+                </div>
+
+
+                <!-- NEWS 3 -->
+
+                <div class="recent-news-item">
+
+                    <div class="recent-news-date">
+                        Dec 2024
+                    </div>
+
+                    <div class="recent-news-title">
+                        Attended ASIACRYPT 2024 and INDOCRYPT 2024
+                    </div>
+
+                    <div class="recent-news-description">
+                        Participated in major international
+                        and national cryptography conferences.
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </aside>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
-<p>
-© 2026 Sanajit Patra
-</p>
+    <div class="footer-inner">
 
-<p>
-Department of Mathematics, IIT Kharagpur
-</p>
+        <div class="footer-left">
 
-<p class="visitor">
-👁 Visitors:
-<span id="stats">Loading...</span>
-</p>
+            © 2026
+            <strong>Sanajit Patra</strong>
+
+            · Department of Mathematics, IIT Kharagpur
+
+        </div>
+
+
+        <div id="stats">
+            Visitors: —
+        </div>
+
+    </div>
 
 </footer>
 
-<!-- ================= VISITOR COUNTER ================= -->
+
+
+<!-- =========================================================
+     GOATCOUNTER
+========================================================= -->
 
 <script
-data-goatcounter="https://sanajitp.goatcounter.com/count"
-async
-src="https://gc.zgo.at/count.js">
+    data-goatcounter="https://sanajitp.goatcounter.com/count"
+    async
+    src="https://gc.zgo.at/count.js">
 </script>
+
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+    fetch(
+        "https://sanajitp.goatcounter.com/counter/TOTAL.json"
+    )
 
-    async function loadVisitors() {
+    .then(response => response.json())
 
-        try {
+    .then(data => {
 
-            const res = await fetch(
-                "https://sanajitp.goatcounter.com/counter/TOTAL.json"
-            );
+        document.getElementById("stats").textContent =
+            "Visitors: " + data.count;
 
-            const data = await res.json();
+    })
 
-            document.getElementById("stats").innerText =
-                data.count;
+    .catch(() => {
 
-        }
+        document.getElementById("stats").textContent =
+            "Visitors: 0";
 
-        catch (e) {
-
-            document.getElementById("stats").innerText = "0";
-
-        }
-
-    }
-
-    loadVisitors();
-
-});
+    });
 
 </script>
+
 
 </body>
 
