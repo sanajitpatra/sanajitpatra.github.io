@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,7 +11,10 @@
     <meta name="google-site-verification"
           content="zg6gcW0nBMQCV0DNFG3AVQgDTFMWgXaIUOo19vdIJKA">
 
-    <!-- Fonts -->
+    <!-- =========================================================
+         FONTS
+    ========================================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -22,9 +26,10 @@
 
         /* =========================================================
            ROOT
-        ========================================================= */
+        ========================================================== */
 
         :root {
+
             --maroon: #731f35;
             --maroon-dark: #541525;
             --maroon-light: #f8f1f3;
@@ -42,6 +47,7 @@
             --muted: #778089;
 
             --background: #ffffff;
+
             --border: #e4e7e9;
 
             --max-width: 1500px;
@@ -50,7 +56,7 @@
 
         /* =========================================================
            RESET
-        ========================================================= */
+        ========================================================== */
 
         * {
             margin: 0;
@@ -58,22 +64,27 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: "DM Sans", sans-serif;
             color: var(--text);
             background: var(--background);
+
             line-height: 1.7;
             font-size: 16px;
         }
+
 
         a {
             color: inherit;
             text-decoration: none;
         }
+
 
         img {
             max-width: 100%;
@@ -83,40 +94,49 @@
 
         /* =========================================================
            NAVIGATION
-        ========================================================= */
+        ========================================================== */
 
         .navbar {
+
             height: 76px;
 
             border-bottom: 1px solid var(--border);
 
-            background: rgba(255, 255, 255, 0.97);
+            background: rgba(255,255,255,0.96);
 
             position: sticky;
             top: 0;
+
             z-index: 1000;
 
             backdrop-filter: blur(10px);
         }
 
+
         .nav-inner {
+
             max-width: var(--max-width);
 
             height: 100%;
 
             margin: auto;
 
-            padding: 0 35px;
+            padding: 0 40px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
         }
 
+
         .logo {
+
             font-family: "Libre Baskerville", serif;
 
             font-size: 21px;
+
             font-weight: 700;
 
             color: var(--maroon);
@@ -124,17 +144,23 @@
             letter-spacing: -0.3px;
         }
 
+
         .nav-links {
+
             display: flex;
+
             align-items: center;
 
             gap: 34px;
         }
 
+
         .nav-links a {
+
             position: relative;
 
             font-size: 14px;
+
             font-weight: 500;
 
             color: #454c51;
@@ -142,7 +168,9 @@
             padding: 27px 0;
         }
 
+
         .nav-links a::after {
+
             content: "";
 
             position: absolute;
@@ -158,73 +186,92 @@
             transition: width 0.25s ease;
         }
 
+
         .nav-links a:hover {
+
             color: var(--maroon);
         }
 
+
         .nav-links a:hover::after {
+
             width: 100%;
         }
 
 
         /* =========================================================
            HERO
-        ========================================================= */
+        ========================================================== */
 
         .hero {
+
             position: relative;
 
-            /* Compact hero */
             min-height: 275px;
 
             overflow: hidden;
 
             background:
+
                 linear-gradient(
                     90deg,
                     rgba(50, 10, 22, 0.88),
                     rgba(80, 20, 38, 0.72),
                     rgba(60, 15, 28, 0.55)
                 ),
+
                 url("iitkgp.jpg");
 
             background-size: cover;
+
             background-position: center;
         }
 
+
         .hero-inner {
+
             max-width: var(--max-width);
 
             min-height: 275px;
 
             margin: auto;
 
-            padding: 35px 35px;
+            padding: 35px 40px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
-            gap: 60px;
+            gap: 50px;
         }
 
+
         .hero-content {
+
             max-width: 760px;
         }
 
+
         .hero-kicker {
+
             color: #ead9aa;
 
             text-transform: uppercase;
+
             letter-spacing: 3px;
 
-            font-size: 11px;
+            font-size: 12px;
+
             font-weight: 600;
 
-            margin-bottom: 9px;
+            margin-bottom: 10px;
         }
 
+
         .hero h1 {
+
             color: white;
 
             font-family: "Libre Baskerville", serif;
@@ -235,54 +282,58 @@
 
             font-weight: 400;
 
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
+
         .hero-institute {
+
             color: white;
 
-            font-size: 17px;
+            font-size: 18px;
+
             font-weight: 500;
 
             margin-bottom: 14px;
         }
 
+
         .hero-line {
+
             width: 60px;
-            height: 2px;
+
+            height: 3px;
 
             background: var(--gold);
 
-            margin-bottom: 14px;
+            margin-bottom: 0;
         }
 
-        .hero-description {
-            color: rgba(255, 255, 255, 0.88);
 
-            max-width: 680px;
-
-            font-size: 14px;
-
-            line-height: 1.6;
-        }
+        /* =========================================================
+           HERO QUOTE
+        ========================================================== */
 
         .hero-quote {
-            max-width: 260px;
+
+            max-width: 290px;
 
             padding-left: 25px;
 
-            border-left: 1px solid rgba(255, 255, 255, 0.35);
+            border-left: 1px solid rgba(255,255,255,0.35);
 
-            color: rgba(255, 255, 255, 0.82);
+            color: rgba(255,255,255,0.82);
 
             font-family: "Libre Baskerville", serif;
 
-            font-size: 12px;
+            font-size: 13px;
 
-            line-height: 1.8;
+            line-height: 1.75;
         }
 
+
         .hero-quote span {
+
             display: block;
 
             margin-top: 10px;
@@ -291,7 +342,8 @@
 
             font-family: "DM Sans", sans-serif;
 
-            font-size: 10px;
+            font-size: 11px;
+
             font-weight: 600;
 
             text-transform: uppercase;
@@ -302,26 +354,24 @@
 
         /* =========================================================
            MAIN
-        ========================================================= */
+        ========================================================== */
 
         main {
+
             max-width: var(--max-width);
 
             margin: auto;
 
-            padding: 75px 35px 100px;
+            padding: 65px 40px 90px;
         }
 
 
         /* =========================================================
            THREE COLUMN LAYOUT
-
-           LEFT   = Profile       250px
-           MIDDLE = Main content  Flexible
-           RIGHT  = Recent News   250px
-        ========================================================= */
+        ========================================================== */
 
         .home-layout {
+
             display: grid;
 
             grid-template-columns:
@@ -336,10 +386,11 @@
 
 
         /* =========================================================
-           PROFILE — LEFT
-        ========================================================= */
+           LEFT PROFILE
+        ========================================================== */
 
         .profile {
+
             position: sticky;
 
             top: 110px;
@@ -353,8 +404,11 @@
             border-top: 3px solid #c7d9e5;
         }
 
+
         .profile-photo {
+
             width: 175px;
+
             height: 175px;
 
             border-radius: 50%;
@@ -364,69 +418,87 @@
             border: 5px solid white;
 
             box-shadow:
-                0 0 0 1px var(--border),
-                0 15px 35px rgba(0, 0, 0, 0.10);
 
-            margin-bottom: 25px;
+                0 0 0 1px var(--border),
+
+                0 15px 35px rgba(0,0,0,0.10);
+
+            margin: 0 auto 22px;
         }
 
+
         .profile-name {
+
             font-family: "Libre Baskerville", serif;
 
-            font-size: 25px;
+            font-size: 23px;
 
             color: var(--ink);
 
             margin-bottom: 5px;
         }
 
+
         .profile-role {
+
             color: var(--maroon);
 
-            font-size: 14px;
+            font-size: 13px;
+
             font-weight: 600;
 
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
+
         .profile-affiliation {
+
             color: var(--text);
 
-            font-size: 14px;
+            font-size: 13px;
 
             line-height: 1.65;
 
-            margin-bottom: 24px;
+            margin-bottom: 22px;
         }
 
+
         .profile-links {
+
             display: flex;
 
             flex-direction: column;
 
-            gap: 8px;
+            gap: 7px;
 
-            padding-top: 20px;
+            padding-top: 18px;
 
             border-top: 1px solid var(--border);
         }
 
+
         .profile-links a {
+
             color: var(--muted);
 
-            font-size: 13px;
+            font-size: 12px;
+
             font-weight: 500;
 
             transition: 0.2s ease;
         }
 
+
         .profile-links a:hover {
+
             color: var(--maroon);
 
             transform: translateX(3px);
         }
 
+
         .profile-links a::before {
+
             content: "↗";
 
             margin-right: 8px;
@@ -436,77 +508,93 @@
 
 
         /* =========================================================
-           MIDDLE CONTENT
-        ========================================================= */
+           MAIN CONTENT
+        ========================================================== */
 
         .content {
+
             min-width: 0;
         }
 
+
         .section {
-            margin-bottom: 72px;
+
+            margin-bottom: 55px;
         }
 
+
         .section-label {
+
             display: flex;
 
             align-items: center;
 
-            gap: 15px;
+            gap: 13px;
 
             color: var(--maroon);
 
-            font-size: 12px;
+            font-size: 11px;
+
             font-weight: 700;
 
             letter-spacing: 2.5px;
 
             text-transform: uppercase;
 
-            margin-bottom: 16px;
+            margin-bottom: 13px;
         }
 
+
         .section-label::after {
+
             content: "";
 
-            width: 45px;
+            width: 42px;
+
             height: 1px;
 
             background: var(--gold);
         }
 
+
         .section h2 {
+
             font-family: "Libre Baskerville", serif;
 
             color: var(--ink);
 
-            font-size: 31px;
+            font-size: 29px;
 
             font-weight: 400;
 
-            margin-bottom: 23px;
+            margin-bottom: 19px;
         }
 
-        .section p {
-            max-width: 900px;
 
-            font-size: 16px;
+        .section p {
+
+            max-width: 850px;
+
+            font-size: 15px;
 
             color: var(--text);
 
-            line-height: 1.9;
+            line-height: 1.85;
         }
 
+
         .section p + p {
-            margin-top: 15px;
+
+            margin-top: 13px;
         }
 
 
         /* =========================================================
-           ABOUT ME — LIGHT BLUE BLOCK
-        ========================================================= */
+           ABOUT
+        ========================================================== */
 
         .about-section {
+
             background: var(--blue-light);
 
             padding: 32px 38px 34px;
@@ -514,41 +602,53 @@
             border-left: 4px solid var(--blue-border);
 
             margin-left: 0;
-
-            margin-bottom: 72px;
         }
+
 
         .about-section h2 {
-            margin-bottom: 23px;
-        }
 
-        .about-section p {
-            max-width: 900px;
+            margin-bottom: 17px;
         }
 
 
         /* =========================================================
-           RESEARCH — MAROON BLOCK
-        ========================================================= */
+           RESEARCH INTERESTS — COMPACT
+        ========================================================== */
 
         .research-section {
+
             background: var(--maroon-light);
 
-            padding: 42px 45px;
+            padding: 28px 32px 30px;
 
             border-left: 4px solid var(--maroon);
 
-            /* Same alignment as About */
             margin-left: 0;
-
-            margin-bottom: 72px;
         }
 
-        .research-section p {
-            margin-bottom: 32px;
+
+        .research-section .section-label {
+
+            margin-bottom: 11px;
         }
+
+
+        .research-section h2 {
+
+            margin-bottom: 13px;
+        }
+
+
+        .research-section > p {
+
+            margin-bottom: 17px;
+
+            line-height: 1.65;
+        }
+
 
         .research-grid {
+
             display: grid;
 
             grid-template-columns: repeat(2, 1fr);
@@ -556,8 +656,10 @@
             border-top: 1px solid #e5d8dc;
         }
 
+
         .research-item {
-            padding: 20px 15px;
+
+            padding: 11px 14px;
 
             border-bottom: 1px solid #e5d8dc;
 
@@ -565,39 +667,109 @@
 
             font-family: "Libre Baskerville", serif;
 
-            font-size: 15px;
+            font-size: 13px;
+
+            line-height: 1.45;
 
             transition: 0.2s ease;
         }
 
+
         .research-item:nth-child(odd) {
+
             border-right: 1px solid #e5d8dc;
         }
 
+
         .research-item:hover {
+
             color: var(--maroon);
 
-            padding-left: 20px;
+            padding-left: 18px;
         }
 
+
         .research-item span {
+
             display: block;
 
             color: var(--muted);
 
             font-family: "DM Sans", sans-serif;
 
-            font-size: 12px;
+            font-size: 10.5px;
 
-            margin-top: 4px;
+            line-height: 1.35;
+
+            margin-top: 2px;
         }
 
 
         /* =========================================================
-           RECENT NEWS — RIGHT
-        ========================================================= */
+           ACADEMIC PROFILE
+        ========================================================== */
+
+        .quick-links {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin-top: 18px;
+        }
+
+
+        .quick-link {
+
+            padding: 16px 18px;
+
+            border: 1px solid var(--border);
+
+            background: white;
+
+            transition: 0.25s ease;
+        }
+
+
+        .quick-link:hover {
+
+            border-color: var(--maroon);
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.06);
+        }
+
+
+        .quick-link strong {
+
+            display: block;
+
+            color: var(--ink);
+
+            font-size: 13px;
+
+            margin-bottom: 2px;
+        }
+
+
+        .quick-link span {
+
+            color: var(--muted);
+
+            font-size: 11px;
+        }
+
+
+        /* =========================================================
+           RIGHT — LATEST NEWS
+        ========================================================== */
 
         .recent-news {
+
             position: sticky;
 
             top: 110px;
@@ -613,35 +785,9 @@
             border-top: 3px solid var(--maroon);
         }
 
-        .recent-news .section-label {
-            margin-bottom: 12px;
-        }
 
-        .recent-news h2 {
-            font-family: "Libre Baskerville", serif;
+        .recent-news-label {
 
-            color: var(--ink);
-
-            font-size: 25px;
-
-            font-weight: 400;
-
-            line-height: 1.35;
-
-            margin-bottom: 23px;
-        }
-
-        .recent-news-list {
-            border-top: 1px solid var(--border);
-        }
-
-        .recent-news-item {
-            padding: 19px 0;
-
-            border-bottom: 1px solid var(--border);
-        }
-
-        .recent-news-date {
             color: var(--maroon);
 
             font-size: 11px;
@@ -650,37 +796,91 @@
 
             text-transform: uppercase;
 
-            letter-spacing: 1.1px;
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .recent-news h2 {
+
+            font-family: "Libre Baskerville", serif;
+
+            color: var(--ink);
+
+            font-size: 22px;
+
+            font-weight: 400;
+
+            line-height: 1.35;
+
+            margin-bottom: 20px;
+        }
+
+
+        .recent-news-item {
+
+            padding: 17px 0;
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        .recent-news-item:last-child {
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        /* RESTORED EARLIER NEWS FONT SIZES */
+
+        .recent-news-date {
+
+            color: var(--maroon);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.2px;
 
             margin-bottom: 7px;
         }
 
+
         .recent-news-title {
+
             color: var(--ink);
 
-            font-size: 14px;
+            font-size: 16px;
 
             font-weight: 600;
 
-            line-height: 1.55;
-
-            margin-bottom: 5px;
+            line-height: 1.5;
         }
+
 
         .recent-news-description {
+
             color: var(--muted);
 
-            font-size: 12px;
+            font-size: 14px;
 
             line-height: 1.6;
+
+            margin-top: 5px;
         }
 
+
         .recent-news-tag {
+
             display: inline-block;
 
             margin-top: 8px;
 
-            padding: 3px 8px;
+            padding: 3px 9px;
 
             border: 1px solid #d9c8ce;
 
@@ -688,7 +888,7 @@
 
             color: var(--maroon);
 
-            font-size: 9px;
+            font-size: 10px;
 
             font-weight: 700;
 
@@ -699,70 +899,24 @@
 
 
         /* =========================================================
-           QUICK LINKS
-        ========================================================= */
-
-        .quick-links {
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 14px;
-
-            margin-top: 20px;
-        }
-
-        .quick-link {
-            padding: 18px 20px;
-
-            border: 1px solid var(--border);
-
-            background: white;
-
-            transition: 0.25s ease;
-        }
-
-        .quick-link:hover {
-            border-color: var(--maroon);
-
-            transform: translateY(-3px);
-
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-        }
-
-        .quick-link strong {
-            display: block;
-
-            color: var(--ink);
-
-            font-size: 14px;
-
-            margin-bottom: 3px;
-        }
-
-        .quick-link span {
-            color: var(--muted);
-
-            font-size: 12px;
-        }
-
-
-        /* =========================================================
            FOOTER
-        ========================================================= */
+        ========================================================== */
 
         footer {
+
             background: #f5f6f7;
 
             border-top: 1px solid var(--border);
         }
 
+
         .footer-inner {
+
             max-width: var(--max-width);
 
             margin: auto;
 
-            padding: 30px 35px;
+            padding: 28px 40px;
 
             display: flex;
 
@@ -773,32 +927,39 @@
             gap: 20px;
         }
 
+
         .footer-left {
+
             color: var(--muted);
 
-            font-size: 12px;
+            font-size: 11px;
         }
 
+
         .footer-left strong {
+
             color: var(--maroon);
 
             font-weight: 600;
         }
 
+
         #stats {
+
             color: var(--muted);
 
-            font-size: 12px;
+            font-size: 11px;
         }
 
 
         /* =========================================================
            TABLET
-        ========================================================= */
+        ========================================================== */
 
         @media (max-width: 1200px) {
 
             .home-layout {
+
                 grid-template-columns:
                     225px
                     minmax(450px, 1fr)
@@ -807,78 +968,73 @@
                 gap: 35px;
             }
 
-            .profile-photo {
-                width: 160px;
-                height: 160px;
+
+            .nav-inner,
+            .hero-inner,
+            main,
+            .footer-inner {
+
+                padding-left: 30px;
+                padding-right: 30px;
             }
 
-            .profile {
-                padding: 25px 20px 28px;
-            }
-
-            .recent-news {
-                padding: 27px 20px;
-            }
         }
 
 
         /* =========================================================
            SMALL TABLET
-        ========================================================= */
+        ========================================================== */
 
         @media (max-width: 950px) {
 
-            .hero-quote {
-                display: none;
-            }
-
             .home-layout {
+
                 grid-template-columns:
                     210px
                     minmax(0, 1fr);
 
-                gap: 50px;
+                gap: 35px;
             }
 
+
             .recent-news {
+
                 grid-column: 1 / -1;
 
                 position: static;
 
-                width: 100%;
+                display: block;
             }
 
-            .recent-news-list {
-                display: grid;
 
-                grid-template-columns: repeat(3, 1fr);
+            .hero-quote {
 
-                gap: 25px;
-
-                border-top: none;
+                display: none;
             }
 
-            .recent-news-item {
-                border-top: 1px solid var(--border);
-            }
 
             .quick-links {
+
                 grid-template-columns: 1fr;
             }
+
         }
 
 
         /* =========================================================
            MOBILE
-        ========================================================= */
+        ========================================================== */
 
         @media (max-width: 700px) {
 
             .navbar {
+
                 height: auto;
             }
 
+
             .nav-inner {
+
                 padding: 18px 20px;
 
                 flex-direction: column;
@@ -886,7 +1042,9 @@
                 gap: 13px;
             }
 
+
             .nav-links {
+
                 gap: 20px;
 
                 flex-wrap: wrap;
@@ -894,174 +1052,190 @@
                 justify-content: center;
             }
 
+
             .nav-links a {
+
                 padding: 3px 0;
             }
 
+
             .nav-links a::after {
+
                 bottom: -2px;
             }
 
 
-            /* HERO */
-
             .hero {
-                min-height: 270px;
+
+                min-height: 260px;
             }
 
+
             .hero-inner {
-                min-height: 270px;
+
+                min-height: 260px;
 
                 padding: 38px 22px;
             }
 
+
             .hero h1 {
-                font-size: 40px;
+
+                font-size: 42px;
             }
 
+
             .hero-institute {
+
                 font-size: 16px;
             }
 
-            .hero-description {
-                font-size: 14px;
-            }
-
-
-            /* MAIN */
 
             main {
-                padding: 55px 22px 70px;
+
+                padding: 45px 22px 65px;
             }
+
 
             .home-layout {
-                display: flex;
 
-                flex-direction: column;
+                grid-template-columns: 1fr;
 
-                gap: 55px;
+                gap: 40px;
             }
 
-            .profile,
-            .content,
-            .recent-news {
-                width: 100%;
-            }
 
             .profile {
+
                 position: static;
 
-                padding: 28px 25px 35px;
-
-                border-bottom: 1px solid var(--border);
+                padding: 28px 24px 30px;
             }
+
 
             .profile-photo {
+
                 width: 145px;
+
                 height: 145px;
+
+                margin-left: 0;
             }
 
-
-            /* ABOUT */
 
             .about-section {
-                padding: 28px 25px 30px;
 
-                margin-left: 0;
-
-                margin-bottom: 60px;
+                padding: 28px 24px 30px;
             }
 
-
-            /* RESEARCH */
 
             .research-section {
-                padding: 30px 25px;
 
-                margin-left: 0;
-
-                margin-bottom: 60px;
+                padding: 24px 20px 26px;
             }
 
+
             .research-grid {
+
                 grid-template-columns: 1fr;
             }
 
+
             .research-item:nth-child(odd) {
+
                 border-right: none;
             }
 
 
-            /* NEWS */
+            .research-item {
+
+                padding: 11px 12px;
+            }
+
 
             .recent-news {
-                padding: 28px 24px;
+
+                grid-column: auto;
+
+                display: block;
+
+                position: static;
+
+                padding: 28px 22px 30px;
             }
 
-            .recent-news-list {
-                display: block;
-            }
 
             .recent-news-item {
-                padding: 18px 0;
+
+                padding: 17px 0;
             }
 
 
-            /* FOOTER */
-
             .footer-inner {
+
+                padding: 25px 22px;
+
                 flex-direction: column;
 
                 align-items: flex-start;
             }
+
         }
 
 
         /* =========================================================
            SMALL MOBILE
-        ========================================================= */
+        ========================================================== */
 
         @media (max-width: 430px) {
 
             .nav-links {
+
                 gap: 13px;
             }
 
+
             .nav-links a {
+
                 font-size: 13px;
             }
+
 
             .hero h1 {
-                font-size: 36px;
+
+                font-size: 38px;
             }
 
-            .hero-institute {
-                font-size: 15px;
-            }
-
-            .hero-description {
-                font-size: 13px;
-            }
 
             .section h2 {
-                font-size: 27px;
+
+                font-size: 26px;
             }
 
+
             .about-section {
+
                 padding: 25px 20px 27px;
             }
 
+
             .research-section {
-                padding: 25px 20px;
+
+                padding: 22px 18px 24px;
             }
 
-            .profile {
-                padding: 25px 20px 30px;
+
+            .research-item {
+
+                font-size: 13px;
             }
 
-            .recent-news {
-                padding: 25px 20px;
+
+            .research-item span {
+
+                font-size: 10px;
             }
+
         }
 
     </style>
@@ -1083,6 +1257,7 @@
         <a href="index.html" class="logo">
             Sanajit Patra
         </a>
+
 
         <nav class="nav-links">
 
@@ -1118,27 +1293,27 @@
 
     <div class="hero-inner">
 
+
         <div class="hero-content">
+
 
             <div class="hero-kicker">
                 Department of Mathematics
             </div>
 
+
             <h1>
                 Mathematics
             </h1>
+
 
             <div class="hero-institute">
                 Indian Institute of Technology Kharagpur
             </div>
 
+
             <div class="hero-line"></div>
 
-            <p class="hero-description">
-                Research in modern public-key cryptography,
-                functional encryption, registration-based encryption,
-                anamorphic encryption, and lattice-based cryptography.
-            </p>
 
         </div>
 
@@ -1154,6 +1329,7 @@
 
         </div>
 
+
     </div>
 
 </section>
@@ -1166,14 +1342,16 @@
 
 <main>
 
+
     <div class="home-layout">
 
 
         <!-- =====================================================
-             LEFT PROFILE
+             LEFT — PROFILE
         ====================================================== -->
 
         <aside class="profile">
+
 
             <img
                 src="sanajit.jpeg"
@@ -1181,25 +1359,33 @@
                 class="profile-photo"
             >
 
+
             <h2 class="profile-name">
                 Sanajit Patra
             </h2>
+
 
             <div class="profile-role">
                 PhD Student
             </div>
 
+
             <div class="profile-affiliation">
+
                 Department of Mathematics<br>
+
                 Indian Institute of Technology Kharagpur
+
             </div>
 
 
             <div class="profile-links">
 
+
                 <a href="mailto:sanajitpatra@kgpian.iitkgp.ac.in">
                     Email
                 </a>
+
 
                 <a
                     href="https://scholar.google.com/citations?hl=en&user=OY_pf8MAAAAJ"
@@ -1209,26 +1395,31 @@
                     Google Scholar
                 </a>
 
+
                 <a href="#" target="_blank">
                     ORCID
                 </a>
+
 
                 <a href="#" target="_blank">
                     GitHub
                 </a>
 
+
                 <a href="CV.pdf" target="_blank">
                     Curriculum Vitae
                 </a>
 
+
             </div>
+
 
         </aside>
 
 
 
         <!-- =====================================================
-             MIDDLE CONTENT
+             MIDDLE — CONTENT
         ====================================================== -->
 
         <div class="content">
@@ -1240,28 +1431,37 @@
 
             <section class="section about-section">
 
+
                 <div class="section-label">
                     About
                 </div>
+
 
                 <h2>
                     About Me
                 </h2>
 
+
                 <p>
+
                     I am a PhD student in the Department of Mathematics
                     at the Indian Institute of Technology Kharagpur
                     under the supervision of Prof. Ratna Dutta.
+
                 </p>
 
+
                 <p>
+
                     Previously, I completed my post-graduation from
                     Ramakrishna Mission Vivekananda Educational and
                     Research Institute (RKMVERI), Belur, in Pure
                     Mathematics. I completed my graduation from
                     Midnapore College (Autonomous) with Honours in
                     Mathematics.
+
                 </p>
+
 
             </section>
 
@@ -1273,18 +1473,23 @@
 
             <section class="section research-section">
 
+
                 <div class="section-label">
                     Research
                 </div>
+
 
                 <h2>
                     Research Interests
                 </h2>
 
+
                 <p>
+
                     My research interests lie in public-key cryptography,
                     particularly in the design and analysis of modern
                     cryptographic primitives.
+
                 </p>
 
 
@@ -1359,6 +1564,7 @@
 
                 </div>
 
+
             </section>
 
 
@@ -1369,9 +1575,11 @@
 
             <section class="section">
 
+
                 <div class="section-label">
                     Explore
                 </div>
+
 
                 <h2>
                     Academic Profile
@@ -1381,10 +1589,7 @@
                 <div class="quick-links">
 
 
-                    <a
-                        href="research.html"
-                        class="quick-link"
-                    >
+                    <a href="research.html" class="quick-link">
 
                         <strong>
                             Research
@@ -1397,10 +1602,7 @@
                     </a>
 
 
-                    <a
-                        href="publications.html"
-                        class="quick-link"
-                    >
+                    <a href="publications.html" class="quick-link">
 
                         <strong>
                             Publications
@@ -1413,10 +1615,7 @@
                     </a>
 
 
-                    <a
-                        href="contact.html"
-                        class="quick-link"
-                    >
+                    <a href="contact.html" class="quick-link">
 
                         <strong>
                             Contact
@@ -1431,6 +1630,7 @@
 
                 </div>
 
+
             </section>
 
 
@@ -1439,95 +1639,121 @@
 
 
         <!-- =====================================================
-             RIGHT — RECENT NEWS
+             RIGHT — LATEST NEWS
         ====================================================== -->
 
         <aside class="recent-news">
 
-            <div class="section-label">
+
+            <div class="recent-news-label">
                 Updates
             </div>
 
+
             <h2>
-                Recent News
+                Latest News
             </h2>
 
 
-            <div class="recent-news-list">
+
+            <!-- NEWS 1 -->
+
+            <div class="recent-news-item">
 
 
-                <!-- NEWS 1 -->
+                <div class="recent-news-date">
+                    May 2026
+                </div>
 
-                <div class="recent-news-item">
 
-                    <div class="recent-news-date">
-                        May 2026
-                    </div>
+                <div class="recent-news-title">
 
-                    <div class="recent-news-title">
-                        Compact Fully Asynchronous
-                        Updatable Public Key Encryption
-                    </div>
-
-                    <div class="recent-news-description">
-                        A new preprint on updatable public-key
-                        encryption.
-                    </div>
-
-                    <span class="recent-news-tag">
-                        Preprint
-                    </span>
+                    Compact Fully Asynchronous
+                    Updatable Public Key Encryption
 
                 </div>
 
 
-                <!-- NEWS 2 -->
+                <div class="recent-news-description">
 
-                <div class="recent-news-item">
-
-                    <div class="recent-news-date">
-                        Dec 2025
-                    </div>
-
-                    <div class="recent-news-title">
-                        Attended INDOCRYPT 2025
-                    </div>
-
-                    <div class="recent-news-description">
-                        Participated in the International
-                        Conference on Cryptology in India.
-                    </div>
+                    A new preprint on updatable public-key
+                    encryption.
 
                 </div>
 
 
-                <!-- NEWS 3 -->
+                <span class="recent-news-tag">
+                    Preprint
+                </span>
 
-                <div class="recent-news-item">
 
-                    <div class="recent-news-date">
-                        Dec 2024
-                    </div>
+            </div>
 
-                    <div class="recent-news-title">
-                        Attended ASIACRYPT 2024 and
-                        INDOCRYPT 2024
-                    </div>
 
-                    <div class="recent-news-description">
-                        Participated in major international
-                        and national cryptography conferences.
-                    </div>
+
+            <!-- NEWS 2 -->
+
+            <div class="recent-news-item">
+
+
+                <div class="recent-news-date">
+                    Dec 2025
+                </div>
+
+
+                <div class="recent-news-title">
+
+                    Attended INDOCRYPT 2025
+
+                </div>
+
+
+                <div class="recent-news-description">
+
+                    Participated in the International
+                    Conference on Cryptology in India.
 
                 </div>
 
 
             </div>
+
+
+
+            <!-- NEWS 3 -->
+
+            <div class="recent-news-item">
+
+
+                <div class="recent-news-date">
+                    Dec 2024
+                </div>
+
+
+                <div class="recent-news-title">
+
+                    Attended ASIACRYPT 2024
+                    and INDOCRYPT 2024
+
+                </div>
+
+
+                <div class="recent-news-description">
+
+                    Participated in major international
+                    and national cryptography conferences.
+
+                </div>
+
+
+            </div>
+
 
         </aside>
 
 
     </div>
+
 
 </main>
 
@@ -1539,13 +1765,13 @@
 
 <footer>
 
+
     <div class="footer-inner">
+
 
         <div class="footer-left">
 
-            © 2026
-            <strong>Sanajit Patra</strong>
-
+            © 2026 <strong>Sanajit Patra</strong>
             · Department of Mathematics, IIT Kharagpur
 
         </div>
@@ -1555,7 +1781,9 @@
             Visitors: —
         </div>
 
+
     </div>
+
 
 </footer>
 
