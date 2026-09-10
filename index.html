@@ -31,18 +31,17 @@
 
             --gold: #b89a5a;
 
-            /* Light blue for About section */
             --blue-light: #f2f8fc;
             --blue-border: #b9d7e8;
+
+            --side-light: #fafbfc;
+            --side-border: #e1e6e9;
 
             --ink: #20262b;
             --text: #465058;
             --muted: #778089;
 
             --background: #ffffff;
-            --surface: #f7f8f9;
-            --surface-2: #fbfaf9;
-
             --border: #e4e7e9;
 
             --max-width: 1500px;
@@ -91,7 +90,7 @@
 
             border-bottom: 1px solid var(--border);
 
-            background: rgba(255,255,255,0.97);
+            background: rgba(255, 255, 255, 0.97);
 
             position: sticky;
             top: 0;
@@ -175,7 +174,8 @@
         .hero {
             position: relative;
 
-            min-height: 410px;
+            /* Compact hero */
+            min-height: 275px;
 
             overflow: hidden;
 
@@ -195,17 +195,17 @@
         .hero-inner {
             max-width: var(--max-width);
 
-            min-height: 410px;
+            min-height: 275px;
 
             margin: auto;
 
-            padding: 65px 35px;
+            padding: 35px 35px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            gap: 70px;
+            gap: 60px;
         }
 
         .hero-content {
@@ -218,10 +218,10 @@
             text-transform: uppercase;
             letter-spacing: 3px;
 
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 600;
 
-            margin-bottom: 17px;
+            margin-bottom: 9px;
         }
 
         .hero h1 {
@@ -229,55 +229,55 @@
 
             font-family: "Libre Baskerville", serif;
 
-            font-size: clamp(46px, 6vw, 78px);
+            font-size: clamp(38px, 4.5vw, 55px);
 
             line-height: 1.08;
 
             font-weight: 400;
 
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .hero-institute {
             color: white;
 
-            font-size: 21px;
+            font-size: 17px;
             font-weight: 500;
 
-            margin-bottom: 23px;
+            margin-bottom: 14px;
         }
 
         .hero-line {
-            width: 70px;
-            height: 3px;
+            width: 60px;
+            height: 2px;
 
             background: var(--gold);
 
-            margin-bottom: 23px;
+            margin-bottom: 14px;
         }
 
         .hero-description {
-            color: rgba(255,255,255,0.88);
+            color: rgba(255, 255, 255, 0.88);
 
             max-width: 680px;
 
-            font-size: 17px;
+            font-size: 14px;
 
-            line-height: 1.8;
+            line-height: 1.6;
         }
 
         .hero-quote {
-            max-width: 310px;
+            max-width: 260px;
 
-            padding-left: 30px;
+            padding-left: 25px;
 
-            border-left: 1px solid rgba(255,255,255,0.35);
+            border-left: 1px solid rgba(255, 255, 255, 0.35);
 
-            color: rgba(255,255,255,0.82);
+            color: rgba(255, 255, 255, 0.82);
 
             font-family: "Libre Baskerville", serif;
 
-            font-size: 14px;
+            font-size: 12px;
 
             line-height: 1.8;
         }
@@ -285,13 +285,13 @@
         .hero-quote span {
             display: block;
 
-            margin-top: 13px;
+            margin-top: 10px;
 
             color: #e5d5a5;
 
             font-family: "DM Sans", sans-serif;
 
-            font-size: 12px;
+            font-size: 10px;
             font-weight: 600;
 
             text-transform: uppercase;
@@ -309,27 +309,27 @@
 
             margin: auto;
 
-            padding: 80px 35px 100px;
+            padding: 75px 35px 100px;
         }
 
 
-        /*
+        /* =========================================================
            THREE COLUMN LAYOUT
 
-           LEFT   = Profile
-           MIDDLE = About / Research
-           RIGHT  = Recent News
-        */
+           LEFT   = Profile       250px
+           MIDDLE = Main content  Flexible
+           RIGHT  = Recent News   250px
+        ========================================================= */
 
         .home-layout {
             display: grid;
 
             grid-template-columns:
-                220px
-                minmax(500px, 1fr)
-                285px;
+                250px
+                minmax(520px, 1fr)
+                250px;
 
-            gap: 65px;
+            gap: 55px;
 
             align-items: start;
         }
@@ -343,6 +343,14 @@
             position: sticky;
 
             top: 110px;
+
+            background: var(--side-light);
+
+            padding: 28px 25px 30px;
+
+            border: 1px solid var(--side-border);
+
+            border-top: 3px solid #c7d9e5;
         }
 
         .profile-photo {
@@ -357,7 +365,7 @@
 
             box-shadow:
                 0 0 0 1px var(--border),
-                0 15px 35px rgba(0,0,0,0.10);
+                0 15px 35px rgba(0, 0, 0, 0.10);
 
             margin-bottom: 25px;
         }
@@ -505,11 +513,6 @@
 
             border-left: 4px solid var(--blue-border);
 
-            /*
-               IMPORTANT:
-               Same margin-left as Research section
-               so both blocks align perfectly.
-            */
             margin-left: 0;
 
             margin-bottom: 72px;
@@ -535,11 +538,7 @@
 
             border-left: 4px solid var(--maroon);
 
-            /*
-               IMPORTANT:
-               Do NOT shift this section to the left.
-               It is now aligned exactly with About.
-            */
+            /* Same alignment as About */
             margin-left: 0;
 
             margin-bottom: 72px;
@@ -603,11 +602,13 @@
 
             top: 110px;
 
-            padding: 30px 27px;
+            width: 100%;
 
-            background: #faf8f8;
+            padding: 30px 25px;
 
-            border: 1px solid var(--border);
+            background: var(--side-light);
+
+            border: 1px solid var(--side-border);
 
             border-top: 3px solid var(--maroon);
         }
@@ -726,7 +727,7 @@
 
             transform: translateY(-3px);
 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
         }
 
         .quick-link strong {
@@ -797,17 +798,13 @@
 
         @media (max-width: 1200px) {
 
-            :root {
-                --max-width: 1200px;
-            }
-
             .home-layout {
                 grid-template-columns:
-                    205px
+                    225px
                     minmax(450px, 1fr)
-                    260px;
+                    225px;
 
-                gap: 40px;
+                gap: 35px;
             }
 
             .profile-photo {
@@ -815,8 +812,12 @@
                 height: 160px;
             }
 
+            .profile {
+                padding: 25px 20px 28px;
+            }
+
             .recent-news {
-                padding: 27px 23px;
+                padding: 27px 20px;
             }
         }
 
@@ -844,7 +845,7 @@
 
                 position: static;
 
-                display: block;
+                width: 100%;
             }
 
             .recent-news-list {
@@ -905,25 +906,25 @@
             /* HERO */
 
             .hero {
-                min-height: 350px;
+                min-height: 270px;
             }
 
             .hero-inner {
-                min-height: 350px;
+                min-height: 270px;
 
-                padding: 55px 22px;
+                padding: 38px 22px;
             }
 
             .hero h1 {
-                font-size: 47px;
+                font-size: 40px;
             }
 
             .hero-institute {
-                font-size: 17px;
+                font-size: 16px;
             }
 
             .hero-description {
-                font-size: 15px;
+                font-size: 14px;
             }
 
 
@@ -950,7 +951,7 @@
             .profile {
                 position: static;
 
-                padding-bottom: 35px;
+                padding: 28px 25px 35px;
 
                 border-bottom: 1px solid var(--border);
             }
@@ -1031,11 +1032,15 @@
             }
 
             .hero h1 {
-                font-size: 40px;
+                font-size: 36px;
+            }
+
+            .hero-institute {
+                font-size: 15px;
             }
 
             .hero-description {
-                font-size: 15px;
+                font-size: 13px;
             }
 
             .section h2 {
@@ -1047,6 +1052,14 @@
             }
 
             .research-section {
+                padding: 25px 20px;
+            }
+
+            .profile {
+                padding: 25px 20px 30px;
+            }
+
+            .recent-news {
                 padding: 25px 20px;
             }
         }
@@ -1157,7 +1170,7 @@
 
 
         <!-- =====================================================
-             PROFILE — LEFT
+             LEFT PROFILE
         ====================================================== -->
 
         <aside class="profile">
@@ -1177,11 +1190,8 @@
             </div>
 
             <div class="profile-affiliation">
-
                 Department of Mathematics<br>
-
                 Indian Institute of Technology Kharagpur
-
             </div>
 
 
@@ -1429,7 +1439,7 @@
 
 
         <!-- =====================================================
-             RECENT NEWS — RIGHT
+             RIGHT — RECENT NEWS
         ====================================================== -->
 
         <aside class="recent-news">
@@ -1455,8 +1465,8 @@
                     </div>
 
                     <div class="recent-news-title">
-                        Compact Fully Asynchronous Updatable
-                        Public Key Encryption
+                        Compact Fully Asynchronous
+                        Updatable Public Key Encryption
                     </div>
 
                     <div class="recent-news-description">
@@ -1500,7 +1510,8 @@
                     </div>
 
                     <div class="recent-news-title">
-                        Attended ASIACRYPT 2024 and INDOCRYPT 2024
+                        Attended ASIACRYPT 2024 and
+                        INDOCRYPT 2024
                     </div>
 
                     <div class="recent-news-description">
