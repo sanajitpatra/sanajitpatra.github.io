@@ -8,11 +8,436 @@
 
 <title>Contact | Sanajit Patra</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --maroon: #731f35;
+    --maroon-dark: #541525;
+    --maroon-light: #f8f1f3;
+
+    --gold: #b89a5a;
+
+    --blue-light: #f2f8fc;
+    --blue-border: #b9d7e8;
+
+    --side-light: #fafbfc;
+    --side-border: #e1e6e9;
+
+    --ink: #20262b;
+    --text: #465058;
+    --muted: #778089;
+
+    --background: #ffffff;
+    --border: #e4e7e9;
+
+    --max-width: 1500px;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(8px);
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: auto;
+
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0 40px;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 34px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    position: relative;
+
+    padding: 22px 0;
+
+    transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--maroon);
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 13px;
+
+    height: 2px;
+
+    background: var(--maroon);
+}
+
+
+/* =========================
+   PAGE HERO
+========================= */
+
+.page-hero {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 48px 40px 30px;
+}
+
+.page-hero .eyebrow {
+    color: var(--maroon);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    margin-bottom: 7px;
+}
+
+.page-hero h1 {
+    font-family: "Libre Baskerville", serif;
+
+    color: var(--ink);
+
+    font-size: clamp(32px, 4vw, 46px);
+
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+}
+
+.page-hero p {
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.page {
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    padding: 10px 40px 70px;
+}
+
+
+/* =========================
+   CONTACT GRID
+========================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.75fr;
+
+    gap: 24px;
+
+    align-items: stretch;
+}
+
+
+/* =========================
+   CONTACT CARD
+========================= */
+
+.contact-card {
+    background: var(--blue-light);
+
+    border: 1px solid var(--blue-border);
+
+    border-radius: 8px;
+
+    padding: 26px 28px;
+}
+
+.contact-card.secondary {
+    background: var(--side-light);
+
+    border-color: var(--side-border);
+}
+
+.contact-card h2,
+.contact-card h3 {
+    font-family: "Libre Baskerville", serif;
+
+    color: var(--ink);
+
+    font-size: 19px;
+
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    font-size: 14px;
+
+    color: var(--text);
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   ADDRESS
+========================= */
+
+.address {
+    margin-bottom: 18px;
+}
+
+.address strong {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+
+/* =========================
+   EMAIL
+========================= */
+
+.email-box {
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(115, 31, 53, 0.14);
+}
+
+.email-label {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    margin-bottom: 4px;
+}
+
+.email-box a {
+    color: var(--maroon);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+.email-box a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   QUICK CONTACT
+========================= */
+
+.contact-item {
+    margin-bottom: 17px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    margin-bottom: 3px;
+}
+
+.contact-item a {
+    color: var(--maroon);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    padding: 26px 20px 30px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+footer p:first-child {
+    color: var(--text);
+
+    margin-bottom: 3px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        height: 62px;
+
+        padding: 0 25px;
+    }
+
+    nav ul {
+        gap: 22px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .page-hero {
+        padding: 38px 25px 25px;
+    }
+
+    .page {
+        padding: 5px 25px 55px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    nav {
+        justify-content: center;
+
+        overflow-x: auto;
+    }
+
+    nav ul {
+        gap: 18px;
+        white-space: nowrap;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .page-hero {
+        padding: 32px 20px 22px;
+    }
+
+    .page {
+        padding: 5px 20px 45px;
+    }
+
+    .page-hero h1 {
+        font-size: 30px;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+}
+
+</style>
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <header>
 
@@ -20,15 +445,25 @@
 
 <ul>
 
-<li><a href="index.html">Home</a></li>
+<li>
+<a href="index.html">Home</a>
+</li>
 
-<!-- <li><a href="about.html">About</a></li> -->
+<li>
+<a href="about.html">About</a>
+</li>
 
-<li><a href="research.html">Research</a></li>
+<li>
+<a href="research.html">Research</a>
+</li>
 
-<li><a href="publications.html">Publications</a></li>
+<li>
+<a href="publications.html">Publications</a>
+</li>
 
-<li><a class="active" href="contact.html">Contact</a></li>
+<li>
+<a class="active" href="contact.html">Contact</a>
+</li>
 
 </ul>
 
@@ -36,65 +471,144 @@
 
 </header>
 
-<section class="page">
+
+
+<!-- =========================
+     PAGE TITLE
+========================= -->
+
+<section class="page-hero">
+
+<div class="eyebrow">
+Get in touch
+</div>
 
 <h1>Contact</h1>
 
-<h2>Location</h2>
-
-<div class="map-container">
-
-<iframe
-src="https://maps.google.com/maps?q=IIT%20Kharagpur&t=&z=15&ie=UTF8&iwloc=&output=embed"
-width="100%"
-height="400"
-style="border:0;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
-
-</div>
-
-<h2>Get in Touch</h2>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<h3>Academic Address</h3>
-
 <p>
-Department of Mathematics<br>
-Indian Institute of Technology Kharagpur<br>
-Kharagpur, West Bengal 721302<br>
-India
+For academic correspondence, research discussions, or collaboration,
+please feel free to get in touch.
 </p>
-
-<p>
-📧
-<a href="mailto:sanajitpatra@kgpian.iitkgp.ac.in">
-sanajitpatra@kgpian.iitkgp.ac.in
-</a>
-</p>
-
-</div>
-
-<!-- <div class="contact-card">
-
-
-</div>
-
-</div> -->
 
 </section>
 
+
+
+<!-- =========================
+     CONTACT CONTENT
+========================= -->
+
+<main class="page">
+
+<div class="contact-grid">
+
+
+<!-- Academic Address -->
+
+<div class="contact-card">
+
+<h2>Academic Address</h2>
+
+<p class="address">
+
+<strong>Department of Mathematics</strong><br>
+
+Indian Institute of Technology Kharagpur<br>
+
+Kharagpur, West Bengal 721302<br>
+
+India
+
+</p>
+
+
+<div class="email-box">
+
+<span class="email-label">
+Email
+</span>
+
+<a href="mailto:sanajitpatra@kgpian.iitkgp.ac.in">
+sanajitpatra@kgpian.iitkgp.ac.in
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- Contact Information -->
+
+<div class="contact-card secondary">
+
+<h3>Contact</h3>
+
+
+<div class="contact-item">
+
+<span>
+Email
+</span>
+
+<a href="mailto:sanajitpatra@kgpian.iitkgp.ac.in">
+sanajitpatra@kgpian.iitkgp.ac.in
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<span>
+Affiliation
+</span>
+
+<div>
+Department of Mathematics<br>
+IIT Kharagpur
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<span>
+Location
+</span>
+
+<div>
+Kharagpur, West Bengal
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<p>© 2026 Sanajit Patra</p>
+<p>
+© 2026 Sanajit Patra
+</p>
 
-<p>Department of Mathematics, IIT Kharagpur</p>
+<p>
+Department of Mathematics, IIT Kharagpur
+</p>
 
 </footer>
+
 
 </body>
 
